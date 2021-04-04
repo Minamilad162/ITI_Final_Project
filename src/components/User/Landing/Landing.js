@@ -13,13 +13,13 @@ class Landing extends React.Component{
         //    this.fetchall()
         //    this.setState({  series:this.state.series})  
         var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("token", "c19fafeb-77c7-422e-b012-8a6ca11c380f");
-    var requestOptions = {
+     myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("token", "afcc0e85-b2ee-424a-a8d3-fdcf4cc110ca");
+     var requestOptions = {
         method: 'GET',
         headers: myHeaders,
         redirect: 'follow'
-    };
+        };
     fetch('https://desolate-ocean-66919.herokuapp.com/http://anyservice.imassoft.com/96/videos/',
             requestOptions).then((res)=>res.json()).then(res=>{this.setState({Item:res})})
       

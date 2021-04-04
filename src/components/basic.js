@@ -82,6 +82,7 @@ class Footer extends React.Component{
 }
 
 class Card extends React.Component{
+    
     render(){
         return (
         <div className="row latest-added-videos _content"  id="cards_container">
