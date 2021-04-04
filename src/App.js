@@ -8,6 +8,7 @@ import LoginAdmin from "./components/Admin/Login/Login";
 import RegisterAdmin from "./components/Admin/Register/Register";
 import Loader from "./components/Shared/Loader/Loader";
 import Nav from "./components/Shared/Nav/Nav";
+import Home from './components/User/Home/Home';
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -45,8 +46,8 @@ function App() {
             <Router>
                 <Nav />
                 <Switch>
-                    <Route path="/dashboard">
-                        <Login header="Admin Login" />
+                    <Route path="/">
+                        <Home />
                     </Route>
                 </Switch>
             </Router>
