@@ -29,7 +29,7 @@ ReactDOM.render(
     <div>dkdfklfdklkl</div>
     <Footer /> */}
 
-    <Profile></Profile>
+    {/* <Profile></Profile> */}
 
 {/* working fine */}
     {/* <Series></Series> */}
@@ -41,7 +41,7 @@ ReactDOM.render(
     {/* <PaymentForm></PaymentForm> */}
 
 {/* working fine   */}
-    {/* <Landing></Landing> */}
+    <Landing></Landing>
   </React.StrictMode>,
   document.getElementById('root')
 );

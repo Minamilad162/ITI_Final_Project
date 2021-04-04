@@ -1,47 +1,36 @@
 import {Card} from './../../basic'
 import React from 'react'
+import Apis from './../../apis'
 
 class Series extends React.Component{
     constructor(){
         super()
         this.state = {
-            series:[]
+            Series:[]
+        }
+    }
+    fetchSeries= async()=>{ 
+        // Apis.fetchAll
+        var series = await Apis.fetchAllSeries()
+        if (series){
+            this.setState({Series:series})
+        }
+        else {
+            throw "Error Occured while fetching!"
         }
     }
     
     componentDidMount(){
-            //    this.fetchall()
-            //    this.setState({  series:this.state.series})  
-            var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-        myHeaders.append("token", "c19fafeb-77c7-422e-b012-8a6ca11c380f");
-        var requestOptions = {
-            method: 'GET',
-            headers: myHeaders,
-            redirect: 'follow'
-        };
-        fetch('https://desolate-ocean-66919.herokuapp.com/http://anyservice.imassoft.com/96/videos/',
-                requestOptions).then((res)=>res.json()).then(res=>{this.setState({series:res})})
-          
+         this.fetchSeries()
     }
-    // fetchall=()=>{
-    //     var myHeaders = new Headers();
-    //     myHeaders.append("Content-Type", "application/json");
-    //     myHeaders.append("token", "c19fafeb-77c7-422e-b012-8a6ca11c380f");
-    //     var requestOptions = {
-    //         method: 'GET',
-    //         headers: myHeaders,
-    //         redirect: 'follow'
-    //     };
-    //     fetch('https://desolate-ocean-66919.herokuapp.com/http://anyservice.imassoft.com/96/videos/',
-    //             requestOptions).then((res)=>res.json()).then(res=>{this.setState({series:res})})
-          
-    // }
+  
+
    render(){
     return (<div > 
         <div></div>
-        {this.state.series.map((Item,key)=>{
-         return <div ><Card imgurl ={Item.imgUrl} title = {Item.title} key={key} >
+        {this.state.Series.map((Item,key)=>{
+         return <div key={key} onMouseOver={(e)=>{e.target.style={zIndex:10}}} >
+             <Card imgurl ={Item.imgUrl} title = {Item.title} >
                    </Card></div>
                   })
                }

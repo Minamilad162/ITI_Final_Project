@@ -5,9 +5,9 @@ class Profile extends React.Component{
     constructor(){
         super()
         this.state = {
-            user:{username :'Ahmed',
-            email:'ffff'
-            }
+            username :'',
+            email:'',
+            user:{"id":0}
         }
     }
 
@@ -37,7 +37,7 @@ class Profile extends React.Component{
         else{
         e.target.innerText='Save'
         e.target.parentNode.previousSibling.readOnly= false;
-        console.log( e.target.parentNode.previousSibling.readOnly);
+        console.log(e.target.parentNode.previousSibling.readOnly);
         }
     }
     update = ()=>{
@@ -52,7 +52,10 @@ class Profile extends React.Component{
                };
         fetch("https://reqres.in/api/users/2",requestOptions).then((res)=>res.json()).then(res=>console.log(res))
     }
-
+    updateInput = (e) =>{
+        this.setState({email:e.target.value})
+        this.setState({user: {'id':2}})
+    }
     render(){
         return(
             <div className="profilecontainer">
@@ -65,7 +68,7 @@ class Profile extends React.Component{
                         <span className="glyphicon glyphicon-pencil" ><a onClick={this.handleEdit}>Edit</a></span>
                     </div>
                     <div className="usermail">
-                        <input type="email" readOnly value={this.state.email} onChange={(e)=>this.setState({email:e.target.value})}></input>
+                        <input type="email" readOnly value={this.state.email} onChange={this.updateInput}></input>
                         <span className="glyphicon glyphicon-pencil" ><a onClick={this.handleEdit} >Edit</a></span>
                     </div>
                     <button onClick={this.update}>Update</button>
