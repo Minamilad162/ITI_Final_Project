@@ -1,0 +1,36 @@
+
+.title{
+    text-align: center;
+    margin: 5%;
+}
+
+.input{
+    max-width: 40%;
+}
+.form{
+    margin-left: 39%;
+}
+
+.container{
+    margin-top: 10%;
+}
+.text{
+    color: white;
+}
+
+.Background{
+    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/92bb3a0b-7e91-40a0-b27b-f2c3ac9ef6e4/5e82ecf0-5873-4e02-8619-2307b8ed65a1/EG-en-20210322-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+    background-repeat: no-repeat;
+    max-width: 100%;
+    max-height: 100%;
+    background-size: cover;
+
+}
+
+/* 
+    {backgroundImage: 'url("https://assets.nflxext.com/ffe/siteui/vlv3/92bb3a0b-7e91-40a0-b27b-f2c3ac9ef6e4/5e82ecf0-5873-4e02-8619-2307b8ed65a1/EG-en-20210322-popsignuptwoweeks-perspective_alpha_website_large.jpg")' ,
+        backgroundRepeat: 'no-repeat',
+        width:'100%',
+        height:'100%',
+         backgroundSize:'cover',
+          backgroundPosition: 'Absolute'  */
