@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./login.scss";
 import API from "../../../API";
+import Nav from '../../Shared/Nav/Nav';
 
 // export default class Login extends Component {
 //     constructor(props) {
@@ -11,60 +12,67 @@ import API from "../../../API";
 //     }
 // }
 
-export default function Login({header}) {
-  const [data, setData] = useState({});
+export default function Login({ header, path }) {
+    const [data, setData] = useState({});
 
-  const handleChange = (e) => {
-    const newData = {
-      [e.target.name]: e.target.value,
+    const handleChange = (e) => {
+        const newData = {
+            [e.target.name]: e.target.value,
+        };
+        console.log({ ...data, ...newData });
+        setData({ ...data, ...newData });
     };
-    console.log({ ...data, ...newData });
-    setData({ ...data, ...newData });
-  };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const response = await API.post('login', data)
-  };
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const response = await API.post(path, data);
+        localStorage.setItem("token", response.token);
+    };
 
-  return (
-    <div
-      id="login"
-    >
-      <div className='d-flex justify-content-around flex-column align-items-center'>
-        <div className='login-card'>
-              
-            <div>
-            <h1 className="title text">{header}</h1>
+    return (
+        <>
+            <Nav />
+            <div id="login">
+                <div className="d-flex justify-content-around flex-column align-items-center">
+                    <div className="login-card">
+                        <div>
+                            <h1 className="title text">{header}</h1>
+                        </div>
+
+                        <form className="form p-3" onSubmit={handleSubmit}>
+                            <div class="mb-3">
+                                <label className="form-label text">
+                                    Email address
+                                </label>
+                                <input
+                                    name="email"
+                                    placeholder="Email.."
+                                    className="form-control input"
+                                    onChange={handleChange}
+                                ></input>
+                            </div>
+                            <div className="mb-3">
+                                <label className="form-label text">
+                                    Password
+                                </label>
+                                <input
+                                    name="password"
+                                    placeholder="Your Password.."
+                                    className="form-control input"
+                                    onChange={handleChange}
+                                ></input>
+                            </div>
+                            {/* <span style={{ color: "red" }}> {this.state.error}</span> <br /> */}
+                            <button
+                                type="submit"
+                                className="btn btn-danger mb-3"
+                            >
+                                Log in
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
-
-            <form className="form p-3" onSubmit={handleSubmit}>
-          <div class="mb-3">
-            <label className="form-label text">Email address</label>
-            <input
-              name="email"
-              placeholder="Email.."
-              className="form-control input"
-              onChange={handleChange}
-            ></input>
-          </div>
-          <div className="mb-3">
-            <label className="form-label text">Password</label>
-            <input
-              name="password"
-              placeholder="Your Password.."
-              className="form-control input"
-              onChange={handleChange}
-            ></input>
-          </div>
-          {/* <span style={{ color: "red" }}> {this.state.error}</span> <br /> */}
-          <button type="submit" className="btn btn-danger mb-3">
-            Log in
-          </button>
-        </form>
-      
-        </div>
-      </div>
-    </div>
-  );
+        </>
+    );
 }

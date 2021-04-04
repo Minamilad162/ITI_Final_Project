@@ -1,0 +1,15 @@
+webpackHotUpdate("main",{
+
+/***/ "./src/components/Shared/Nav/Nav.js":
+/*!******************************************!*\
+  !*** ./src/components/Shared/Nav/Nav.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: D:\\ITI\\Courses\\Final Project\\frontend\\src\\components\\Shared\\Nav\\Nav.js: Unexpected token (87:32)\n\n\u001b[0m \u001b[90m 85 |\u001b[39m                                 \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mul\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 86 |\u001b[39m                             \u001b[33m:\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 87 |\u001b[39m                                 }\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 88 |\u001b[39m                             \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mli\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 89 |\u001b[39m                         \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mul\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 90 |\u001b[39m                     \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n    at _temp._raise (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:775:17)\n    at _temp.raiseWithData (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:768:17)\n    at _temp.raise (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:736:17)\n    at _temp.unexpected (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:9716:16)\n    at _temp.parseExprAtom (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:11112:20)\n    at _temp.parseExprAtom (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:5173:20)\n    at _temp.parseExprSubscripts (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10689:23)\n    at _temp.parseUpdate (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10669:21)\n    at _temp.parseMaybeUnary (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10647:23)\n    at _temp.parseExprOps (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10504:23)");
+
+/***/ })
+
+})
+//# sourceMappingURL=main.978ee2b32fca9bfdd14f.hot-update.js.map
