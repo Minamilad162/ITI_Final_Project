@@ -1,0 +1,21 @@
+#loader {
+    .bg {
+
+        width: 100vw;
+        height: 100vh;
+        background-image: url('../../Assets/bg.jpg');
+        filter: blur(3px);
+    }
+
+    .title {
+        margin: auto;
+        // display: block;
+        color: rgba(253, 60, 60, 0.8);
+        top: 35vh;
+        left: 35vw;
+        padding: 3rem;
+        border-radius: 30px;
+        font-size: 100px;
+        background-color: rgba(0,0,0, 0.6);
+    }
+}

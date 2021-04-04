@@ -1,0 +1,28 @@
+#login {
+    background-image: url('../../Assets/bg.jpg');
+    background-blend-mode: hard-light;
+    height: 92vh;
+.title{
+    text-align: center;
+}
+
+.form{
+    max-width: 20rem;
+    width: 100%;
+}
+
+.container{
+    margin-top: 10%;
+}
+.text{
+    color: white;
+}
+
+.login-card {
+    margin-top: 20vh;
+    background-color: rgba(0,0,0, 0.6);
+    padding: 3rem;
+    border-radius: 30px;
+    box-shadow: 3px 3px rgba(247, 54, 54, 0.2);
+}
+}

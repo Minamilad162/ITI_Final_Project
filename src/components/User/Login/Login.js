@@ -1,64 +1,70 @@
-import React, { Component } from 'react';
-import './Login.css';
+import React, { useState, useEffect } from "react";
+import "./login.scss";
+import API from "../../../API";
 
-class Login extends Component {
-    state = { 
-        email:"",
-        password:"",
-        error:""
-    }
+// export default class Login extends Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             active: false
+//         }
+//     }
+// }
 
-        login = () =>{
-            fetch("https://reqres.in/api/login",{
-                method:"POST",
-                headers:{
-                    "content-type":"application/json"
-                },
-                body:JSON.stringify(this.state)
-            }).then(res=>res.json()).then(res=>{
-                if(res.error){
-                   this.setState({error:res.error})
-                }else if(res.token){
-                   localStorage.token=res.token;
-                }
-            }).catch(err=>{
-                alert(err.error);
-            })
-   
-        }
-   
-        changeInput=(e)=>{
-            let statepropname = e.target.name;
-            this.setState({[statepropname]:e.target.value})
-        }
-         
-    render() { 
-        return (
-            <div id="Login" className="container flex-wrap " style={{backgroundImage: 'url("https://assets.nflxext.com/ffe/siteui/vlv3/92bb3a0b-7e91-40a0-b27b-f2c3ac9ef6e4/5e82ecf0-5873-4e02-8619-2307b8ed65a1/EG-en-20210322-popsignuptwoweeks-perspective_alpha_website_large.jpg")' ,backgroundRepeat: 'no-repeat',width:'100%',height:'100%', backgroundSize:'cover', backgroundPosition: 'Absolute' }} >
-<div>   
-    <div>
-    <h1 className="title text">Sign In</h1>    
-    </div> 
+export default function Login({header}) {
+  const [data, setData] = useState({});
 
-<form className="form ">
-    <div class="mb-3">
-        <label  className="form-label text" value={this.state.email} onChange={this.changeInput} >Email address</label>
-        <input type="email"  placeholder="Email.." className="form-control input"  ></input>
+  const handleChange = (e) => {
+    const newData = {
+      [e.target.name]: e.target.value,
+    };
+    console.log({ ...data, ...newData });
+    setData({ ...data, ...newData });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const response = await API.post('login', data)
+  };
+
+  return (
+    <div
+      id="login"
+    >
+      <div className='d-flex justify-content-around flex-column align-items-center'>
+        <div className='login-card'>
+              
+            <div>
+            <h1 className="title text">{header}</h1>
+            </div>
+
+            <form className="form p-3" onSubmit={handleSubmit}>
+          <div class="mb-3">
+            <label className="form-label text">Email address</label>
+            <input
+              name="email"
+              placeholder="Email.."
+              className="form-control input"
+              onChange={handleChange}
+            ></input>
+          </div>
+          <div className="mb-3">
+            <label className="form-label text">Password</label>
+            <input
+              name="password"
+              placeholder="Your Password.."
+              className="form-control input"
+              onChange={handleChange}
+            ></input>
+          </div>
+          {/* <span style={{ color: "red" }}> {this.state.error}</span> <br /> */}
+          <button type="submit" className="btn btn-danger mb-3">
+            Log in
+          </button>
+        </form>
+      
+        </div>
+      </div>
     </div>
-
-    <div className="mb-3">
-        <label  className="form-label text">Password</label>
-        <input type="password" placeholder="Your Password.." className="form-control input" onChange={this.changeInput}></input>
-    </div>
-
-      <span style={{color:'red'}}> {this.state.error}</span> <br/>
-    <button  type="submit" onClick={this.login} className="btn btn-danger mb-3">Log in</button>
-    </form>        
-</div>  
-
-</div>  
-        );
-    }
+  );
 }
- 
-export default Login;
