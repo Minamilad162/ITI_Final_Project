@@ -6,20 +6,30 @@ import API from '../../../API';
 import Loader from '../../Shared/Loader/Loader';
 
 export default function Home() {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
-    useEffect(() => {
-        API.get('unknown').then((response) => {
-            setData(response.data);
-        });
-    }, []);
+    // useEffect(() => {
+    //     API.get('unknown').then((response) => {
+    //         setData(response.data);
+    //     });
+    // }, []);
 
     function myArrow({ type, onClick, isEdge }) {
-        const pointer = type === consts.PREV ? <h1>{'<'}</h1> : '👉';
+        const pointer =
+            type === consts.PREV ? (
+                <button className="carousel-control-prev" type="button" onClick={onClick} disabled={isEdge}>
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
+                </button>
+            ) : (
+                <button className="carousel-control-next" type="button" onClick={onClick} disabled={isEdge}>
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
+                </button>
+            );
+
         return (
-            <button onClick={onClick} disabled={isEdge} classNameName="btn blue-circle">
-                {pointer}
-            </button>
+            pointer
         );
     }
 
@@ -65,11 +75,23 @@ export default function Home() {
                         <span className="visually-hidden">Next</span>
                     </button>
                 </div>
-                <Carousel itemsToShow={4} pagination={false} renderArrow={myArrow}>
+                <Carousel itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className="mt-5 carousel">
                     {data.map((item, index) => (
-                        <h1 key={index}>{item.name}</h1>
+                        <Card />
                     ))}
                 </Carousel>
             </div>
         );
+}
+
+function Card() {
+    return (
+        <div style={{ width: '18rem' }}>
+            <img
+                src="https://media-exp1.licdn.com/dms/image/C561BAQGEbvT3SFyR9Q/company-background_10000/0/1582050035728?e=2159024400&v=beta&t=xwPLRsVBBNXQQS3HN3q7hsYXmt6JxJsH6lpnbh9Y1ko"
+                class="card-img-top"
+                alt="..."
+            />
+        </div>
+    );
 }
