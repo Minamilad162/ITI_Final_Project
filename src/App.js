@@ -21,7 +21,7 @@ function App() {
         localStorage.getItem("token") ? setLogged(true) : setLogged(false);
         setTimeout(function () {
             setLoaded(true);
-        }, 3000);
+        }, 1000);
     }, []);
 
     if (!loaded) return <Loader />;
@@ -48,6 +48,9 @@ function App() {
                 <Switch>
                     <Route path="/">
                         <Home />
+                    </Route>
+                    <Route path="/Login">
+                        <Login />
                     </Route>
                 </Switch>
             </Router>

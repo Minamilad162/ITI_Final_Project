@@ -39,7 +39,23 @@ const API = {
         }
     },
 
-    update: async () => {
+    update: async (path, id) => {
+        try {
+            const token = localStorage.getItem('token');
+            const authAxios = axios.create({
+                headers: {
+                    'Accept': 'application/json',
+                    'COntent-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                }
+            })
+
+            const response = await authAxios.update(`${BASE_URL}/${path}`, id)
+            return response.data;
+        } catch(err) {
+            console.log(err.response.data);
+            alert(err.response.data);
+        }
 
     },
 
