@@ -19,7 +19,12 @@ class Register extends Component {
 
     async handleSubmit(e) {
         e.preventDefault();
-        const response = await API.post('register', this.state);
+        try {
+            const response = await API.post('register', this.state);   
+            window.location.replace('/login');
+        } catch(err) {
+            alert('Something went wrong');
+        }
     }
 
     render() {

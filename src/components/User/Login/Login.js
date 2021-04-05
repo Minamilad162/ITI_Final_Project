@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./login.scss";
 import API from "../../../API";
 import Nav from '../../Shared/Nav/Nav';
+import { useHistory } from "react-router";
 
 // export default class Login extends Component {
 //     constructor(props) {
@@ -27,11 +28,11 @@ export default function Login({ header, endpoint }) {
         e.preventDefault();
         const response = await API.post(endpoint, data);
         localStorage.setItem("token", response.token);
+        window.location.replace('/');
     };
 
     return (
         <>
-            <Nav />
             <div id="login">
                 <div className="d-flex justify-content-around flex-column align-items-center">
                     <div className="login-card">

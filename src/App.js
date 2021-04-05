@@ -11,6 +11,8 @@ import Home from './components/User/Home/Home';
 import UpdateUser from './components/Admin/Update/Update';
 
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
+import Dashboard from './components/Dashboard/Dashboard';
+import LandingPage from './components/Landing-Page/LandingPage';
 
 function App() {
     const [loaded, setLoaded] = useState(false);
@@ -28,9 +30,10 @@ function App() {
     else if (!logged)
         return (
             <Router>
+                <Nav />
                 <Switch>
-                    <Route path="/">
-                        {/* <LandingPage /> */}
+                    <Route exact path="/">
+                        <LandingPage />
                     </Route>
                     <Route path="/login">
                         <Login header={'Log In..'} endpoint={'login'} />
@@ -53,11 +56,17 @@ function App() {
                     <Route exact path="/">
                         <Home />
                     </Route>
+                    <Route path="/landing-page">
+                        <LandingPage />
+                    </Route>
                     <Route path="/users/edit/:id">
                         <UpdateUser />
                     </Route>
                     <Route path="/Login">
                         <Login header={'Please Sign In..'} endpoint={'auth/login'} />
+                    </Route>
+                    <Route path="/dashboard">
+                        <Dashboard />
                     </Route>
                     <Route path="/movies">
                         {/* <Movies /> */}

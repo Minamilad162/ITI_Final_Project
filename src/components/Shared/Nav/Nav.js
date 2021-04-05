@@ -21,9 +21,9 @@ export default function Nav() {
         <div id="nav">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
+                    <Link class="navbar-brand" to="/">
                         Netflix
-                    </a>
+                    </Link>
                     <button
                         class="navbar-toggler"
                         type="button"
@@ -74,7 +74,7 @@ export default function Nav() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" onClick={logout}>
+                                            <a class="dropdown-item" onClick={logout} href='#'>
                                                 Logout
                                             </a>
                                         </li>
