@@ -5,7 +5,7 @@ const BASE_URL = 'https://reqres.in/api';
 const Axios = axios.create({
     headers: {
         'Accept': 'application/json',
-        'COntent-Type': 'application/json'
+        'Content-Type': 'application/json'
     }
 })
 
@@ -26,7 +26,7 @@ const API = {
             const authAxios = axios.create({
                 headers: {
                     'Accept': 'application/json',
-                    'COntent-Type': 'application/json',
+                    'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
                 }
             })
@@ -39,19 +39,19 @@ const API = {
         }
     },
 
-    update: async (path, id) => {
+    update: async (path, id, data) => {
         try {
             const token = localStorage.getItem('token');
             const authAxios = axios.create({
                 headers: {
                     'Accept': 'application/json',
-                    'COntent-Type': 'application/json',
+                    'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
                 }
             })
 
-            const response = await authAxios.update(`${BASE_URL}/${path}`, id)
-            return response.data;
+            const response = await authAxios.patch(`${BASE_URL}/${path}/${id}`, data)
+            return response;
         } catch(err) {
             console.log(err.response.data);
             alert(err.response.data);

@@ -1,16 +1,16 @@
-import React, { Component, useEffect, useState } from "react";
-import "./App.css";
-import Login from "./components/User/Login/Login";
-import Payment from "./components/User/Payment/Payment";
-import Register from "./components/User/Register/Register";
-import "../node_modules/bootstrap/dist/css/bootstrap.css";
-import LoginAdmin from "./components/Admin/Login/Login";
-import RegisterAdmin from "./components/Admin/Register/Register";
-import Loader from "./components/Shared/Loader/Loader";
-import Nav from "./components/Shared/Nav/Nav";
+import React, { Component, useEffect, useState } from 'react';
+import './App.css';
+import Login from './components/User/Login/Login';
+import Payment from './components/User/Payment/Payment';
+import Register from './components/User/Register/Register';
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import RegisterAdmin from './components/Admin/Register/Register';
+import Loader from './components/Shared/Loader/Loader';
+import Nav from './components/Shared/Nav/Nav';
 import Home from './components/User/Home/Home';
+import UpdateUser from './components/Admin/Update/Update';
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
 
 function App() {
     const [loaded, setLoaded] = useState(false);
@@ -18,7 +18,7 @@ function App() {
 
     useEffect(() => {
         // this is calling to api
-        localStorage.getItem("token") ? setLogged(true) : setLogged(false);
+        localStorage.getItem('token') ? setLogged(true) : setLogged(false);
         setTimeout(function () {
             setLoaded(true);
         }, 1000);
@@ -29,15 +29,19 @@ function App() {
         return (
             <Router>
                 <Switch>
-                    <Route path='/login'>
-                        <Login header={"Log In.."} path={"login"} />
+                    <Route path="/">
+                        {/* <LandingPage /> */}
                     </Route>
-                    <Route path="/dashboard">
-                        <Login header={"Admin Login"} path={"admin/login"} />
+                    <Route path="/login">
+                        <Login header={'Log In..'} endpoint={'login'} />
                     </Route>
                     <Route path="/register">
                         <Register />
                     </Route>
+                    <Route path="/admin/login">
+                        <Login header={'Admin Login'} endpoint={'admin/login'} />
+                    </Route>
+                    <Redirect to="/login" />
                 </Switch>
             </Router>
         );
@@ -46,11 +50,23 @@ function App() {
             <Router>
                 <Nav />
                 <Switch>
-                    <Route path="/">
+                    <Route exact path="/">
                         <Home />
                     </Route>
+                    <Route path="/users/edit/:id">
+                        <UpdateUser />
+                    </Route>
                     <Route path="/Login">
-                        <Login />
+                        <Login header={'Please Sign In..'} endpoint={'auth/login'} />
+                    </Route>
+                    <Route path="/movies">
+                        {/* <Movies /> */}
+                    </Route>
+                    <Route path="/series">
+                        {/* <Series /> */}
+                    </Route>
+                    <Route path="/contact-us">
+                        {/* <ContactUs /> */}
                     </Route>
                 </Switch>
             </Router>

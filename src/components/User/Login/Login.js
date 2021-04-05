@@ -12,7 +12,7 @@ import Nav from '../../Shared/Nav/Nav';
 //     }
 // }
 
-export default function Login({ header, path }) {
+export default function Login({ header, endpoint }) {
     const [data, setData] = useState({});
 
     const handleChange = (e) => {
@@ -25,7 +25,7 @@ export default function Login({ header, path }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await API.post(path, data);
+        const response = await API.post(endpoint, data);
         localStorage.setItem("token", response.token);
     };
 

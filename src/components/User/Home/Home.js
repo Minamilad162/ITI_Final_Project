@@ -6,13 +6,14 @@ import API from '../../../API';
 import Loader from '../../Shared/Loader/Loader';
 
 export default function Home() {
-    const [data, setData] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    const [data, setData] = useState([]);
 
-    // useEffect(() => {
-    //     API.get('unknown').then((response) => {
-    //         setData(response.data);
-    //     });
-    // }, []);
+    useEffect(() => {
+        API.get('unknown')
+        .then((response) => {
+            setData(response.data);
+        });
+    }, []);
 
     function myArrow({ type, onClick, isEdge }) {
         const pointer =
@@ -32,6 +33,15 @@ export default function Home() {
             pointer
         );
     }
+
+    const breakPoints = [
+        { width: 1, itemsToShow: 1 },
+        { width: 550, itemsToShow: 2, itemsToScroll: 2, pagination: false },
+        { width: 850, itemsToShow: 3 },
+        { width: 1150, itemsToShow: 4, itemsToScroll: 2 },
+        { width: 1450, itemsToShow: 5 },
+        { width: 1750, itemsToShow: 6 },
+      ]
 
     if (data.length === 0) return <Loader />;
     else
@@ -75,6 +85,16 @@ export default function Home() {
                         <span className="visually-hidden">Next</span>
                     </button>
                 </div>
+                <Carousel breakPoints={breakPoints} itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className="mt-5 carousel">
+                    {data.map((item, index) => (
+                        <Card image_url={item.image_url} />
+                    ))}
+                </Carousel>
+                <Carousel itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className="mt-5 carousel">
+                    {data.map((item, index) => (
+                        <Card image_url={item.image_url} />
+                    ))}
+                </Carousel>
                 <Carousel itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className="mt-5 carousel">
                     {data.map((item, index) => (
                         <Card />
@@ -84,11 +104,11 @@ export default function Home() {
         );
 }
 
-function Card() {
+function Card({image_url}) {
     return (
         <div style={{ width: '18rem' }}>
             <img
-                src="https://media-exp1.licdn.com/dms/image/C561BAQGEbvT3SFyR9Q/company-background_10000/0/1582050035728?e=2159024400&v=beta&t=xwPLRsVBBNXQQS3HN3q7hsYXmt6JxJsH6lpnbh9Y1ko"
+                src={image_url}
                 class="card-img-top"
                 alt="..."
             />

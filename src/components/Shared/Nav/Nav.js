@@ -1,7 +1,14 @@
 import react from 'react';
+import {Link} from 'react-router-dom';
 import './Nav.scss';
 
 export default function Nav() {
+
+    const logout = () => {
+        localStorage.removeItem('token');
+        window.location.reload();
+    }
+
     const token = localStorage.getItem('token');
     let logged;
     if (token) {
@@ -32,14 +39,24 @@ export default function Nav() {
                         {logged ? (
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">
+                                    <Link class="nav-link active" aria-current="page" to="/">
                                         Home
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">
+                                    <Link class="nav-link active" aria-current="page" to="/movies">
                                         Movies
-                                    </a>
+                                    </Link>
+                                </li>
+                                <li class="nav-item">
+                                    <Link class="nav-link active" aria-current="page" to="/series">
+                                        Series
+                                    </Link>
+                                </li>
+                                <li class="nav-item">
+                                    <Link class="nav-link active" aria-current="page" to="/contact-us">
+                                        Contact Us
+                                    </Link>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -57,7 +74,7 @@ export default function Nav() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="#">
+                                            <a class="dropdown-item" onClick={logout}>
                                                 Logout
                                             </a>
                                         </li>
@@ -67,9 +84,14 @@ export default function Nav() {
                         ) : (
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">
+                                    <Link class="nav-link" to="/login">
                                         Login
-                                    </a>
+                                    </Link>
+                                </li>
+                                <li class="nav-item">
+                                    <Link class="nav-link" to="/register">
+                                        Register
+                                    </Link>
                                 </li>
                             </ul>
                         )}
