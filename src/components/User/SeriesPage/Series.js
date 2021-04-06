@@ -26,7 +26,8 @@ class Series extends React.Component{
   
 
    render(){
-    return (<div > 
+    return (
+    <div> 
         <div></div>
         {this.state.Series.map((Item,key)=>{
          return <div key={key} onMouseOver={(e)=>{e.target.style={zIndex:10}}} >
@@ -34,8 +35,8 @@ class Series extends React.Component{
                    </Card></div>
                   })
                }
-         </div>    
-    )
+    </div>    
+        )
    }
 
     

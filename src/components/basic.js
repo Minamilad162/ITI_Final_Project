@@ -1,5 +1,6 @@
 import React from 'react'
 import './basic.css'
+
 class Nav extends React.Component{
     render(){
         return(
@@ -95,8 +96,82 @@ class Card extends React.Component{
     }
 }
 
-// <content class="row latest-added-videos">
-// <div id="cards_container" class="_content">
+
+class Form extends React.Component{
+
+    render(){
+        return(
+            <div>
+                
+                <form className="needs-validation" novalidate> 
+                    <div className="form-row">
+                    <div className="col-md-4 mb-3">
+                    <label htmlFor="validationCustom01">First name</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name"  required />
+                    <div className="valid-feedback">
+                        {/* Looks good! */}
+                    </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                    <label htmlFor="validationCustom02">Last name</label>
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required />
+                    <div className="valid-feedback">
+                        {/* Looks good! */}
+                    </div>
+                    </div>
+            
+            </div>
+        <div className="form-row">
+            <div className="col-md-6 mb-3">
+            <label htmlFor="validationCustom03">City</label>
+            <input type="text" className="form-control" id="validationCustom03" placeholder="City" required />
+            <div className="invalid-feedback">
+                {/* Please provide a valid city. */}
+            </div>
+            </div>
+                <div className="col-md-3 mb-3">
+                <label for="validationCustom04">State</label>
+                <input type="text" className="form-control" id="validationCustom04" placeholder="State" required />
+                <div className="invalid-feedback">
+                    {/* Please provide a valid state. */}
+                </div>
+                </div>
+                <div className="col-md-3 mb-3">
+                <label for="validationCustom05">Zip</label>
+                <input type="text" className="form-control" id="validationCustom05" placeholder="Zip" required />
+                <div className="invalid-feedback">
+                    {/* Please provide a valid zip. */}
+                </div>
+                </div>
+            </div>
+            <div className="col-md-3 mb-3">
+            <button className="btn btn-primary" type="submit">Submit form</button>
+            </div>
+            </form>
+
+
+
+            </div>
+        )
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// <content className="row latest-added-videos">
+// <div id="cards_container" className="_content">
 
 //     <!--EMPTY CONTAINER IN THE BEGINING-->
 //     <!--WILL BE FILLED USING JAVASCRIPT CODE-->
@@ -117,4 +192,4 @@ class Card extends React.Component{
                 </div>` */}
 
 
-export {Nav, Footer, Card}
+export {Nav, Footer, Card, Form}

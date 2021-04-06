@@ -1,81 +1,68 @@
 
 import React from 'react'
-
+import Apis from '../../apis';
+import './edit.css'
 class Profile extends React.Component{
     constructor(){
         super()
         this.state = {
-            username :'',
-            email:'',
-            user:{"id":0}
+            user:{}
+            
+            
         }
     }
 
-    fetchuser = ()=>{
+        //////////// Fetch User data to ////////////
+        fetchuser = ()=>{
         
-        var myHeaders = new Headers();
-         myHeaders.append("Content-Type", "application/json");
-         var requestOptions = {
-                    method: 'GET',
-                    headers: myHeaders,
-                };
-
-        fetch("https://reqres.in/api/users/2",requestOptions).then((res)=>res.json()).
-                    then((res)=>{console.log(res.data);
-                                if(res.data){this.setState({email:res.data.email,username:res.data.first_name})}})
-
-    }
-    componentDidMount(){
-        this.fetchuser();
-
-    }
-    handleEdit = (e)=>{
-        if( e.target.innerText=="Save"){
-            e.target.innerText='Edit';
-            e.target.parentNode.previousSibling.readOnly= true;
+            var myHeaders = new Headers();
+             myHeaders.append("Content-Type", "application/json");
+             var requestOptions = {
+                        method: 'GET',
+                        headers: myHeaders,
+                    };
+            fetch("https://reqres.in/api/users/2",requestOptions).then((res)=>res.json()).
+                        then((res)=>{console.log(res.data);
+                                    if(res.data){this.setState({user:{email:res.data.email,username:res.data.first_name}})}})
         }
-        else{
-        e.target.innerText='Save'
-        e.target.parentNode.previousSibling.readOnly= false;
-        console.log(e.target.parentNode.previousSibling.readOnly);
-        }
+  componentDidMount(){
+       this.fetchuser()
     }
-    update = ()=>{
-        var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-        let user={first_name:this.state.username,email:this.state.email}
-        let reqObj = JSON.stringify(user)
-        var requestOptions = {
-                   method: 'PUT',
-                   headers: myHeaders,
-                   body : reqObj
-               };
-        fetch("https://reqres.in/api/users/2",requestOptions).then((res)=>res.json()).then(res=>console.log(res))
+
+    toggleClick = (e)=>{
+          // change input state ////
+        e.target.parentNode.previousSibling.readOnly = e.target.innerText === 'Save' ? true : false ;
+        //// cahange button text //// 
+        e.target.innerText = e.target.innerText === "Save" ? 'Edit' : 'Save' ;
     }
+    
     updateInput = (e) =>{
-        this.setState({email:e.target.value})
-        this.setState({user: {'id':2}})
+       let email= e.target.name==="email"?e.target.value:this.state.user.email
+       let username = e.target.name==="username"?e.target.value:this.state.user.username
+       this.setState({user:{username,email}})
     }
+
+
     render(){
         return(
-            <div className="profilecontainer">
+            <div className="row">
+                <div className="col-md-3 col-lg-4 col-sm-1"></div>
+            <div className="profilecontainer col-md-6 col-lg-6 col-sm-8">
                 <div className="profilepicture">
                     <span className="glyphicon glyphicon-user"></span>
                 </div>
                 <div className="userinfo">
                     <div className="username">
-                        <input type="text" readOnly value={this.state.username} onChange={(e)=>this.setState({username:e.target.value})}></input>
-                        <span className="glyphicon glyphicon-pencil" ><a onClick={this.handleEdit}>Edit</a></span>
+                        <input type="text" readOnly value={this.state.user.username} onChange={this.updateInput} name="username"></input>
+                        <span className="glyphicon glyphicon-pencil"><a onClick={this.toggleClick}>Edit</a></span>
                     </div>
                     <div className="usermail">
-                        <input type="email" readOnly value={this.state.email} onChange={this.updateInput}></input>
-                        <span className="glyphicon glyphicon-pencil" ><a onClick={this.handleEdit} >Edit</a></span>
+                        <input type="email" readOnly value={this.state.user.email} onChange={this.updateInput} name="email"></input>
+                        <span className="glyphicon glyphicon-pencil" ><a onClick={this.toggleClick} >Edit</a></span>
                     </div>
-                    <button onClick={this.update}>Update</button>
-
+                    <button onClick={()=>{Apis.update(this.state.user);}}>Update</button>
                 </div>
-
-
+            </div>
             </div>
         )
     }

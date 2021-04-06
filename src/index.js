@@ -3,15 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {Nav,Footer} from './components/basic'
+import {Nav,Footer,Form} from './components/basic'
 import Delete from './components/Admin/Delete/Delete';
 import Series from './components/User/SeriesPage/Series';
 import Landing from './components/User/Landing/Landing';
+
 import Profile from './components/User/EditProfile/Edit';
 // import PaymentForm from './credit-cards'
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Nav></Nav>
+   {/* <Nav></Nav> 
+
 
     <br/>
     <br/>
@@ -19,17 +21,12 @@ ReactDOM.render(
     <br/>
     <br/>
     <br/>
-    <br/>
-    <br/>
+    <Form></Form> */}
+{/*     
+    <div>dkdfklfdklkl</div> */}
+    {/* <Footer />  */}
 
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <div>dkdfklfdklkl</div>
-    <Footer /> */}
-
-    {/* <Profile></Profile> */}
+    <Profile></Profile>
 
 {/* working fine */}
     {/* <Series></Series> */}
@@ -41,7 +38,8 @@ ReactDOM.render(
     {/* <PaymentForm></PaymentForm> */}
 
 {/* working fine   */}
-    <Landing></Landing>
+    {/* <Landing></Landing> */}
+
   </React.StrictMode>,
   document.getElementById('root')
 );

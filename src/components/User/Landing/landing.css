@@ -1,0 +1,13 @@
+.landing-container{
+    background-image: url("/src/index.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 500px; */
+    color:rgb(223, 226, 223);
+    font-size: 80px;
+   
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+}

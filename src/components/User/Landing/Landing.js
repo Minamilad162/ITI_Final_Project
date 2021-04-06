@@ -1,49 +1,59 @@
-import Item from 'antd/lib/list/Item'
 import React from 'react'
+
+import './landing.css'
+
 import {Card,Nav,Footer} from './../../basic'
 
 class Landing extends React.Component{
-    constructor(){
-        super()
-        this.state = {
-            Item:[]            
-        }
-    }
-    componentDidMount(){
-        //    this.fetchall()
-        //    this.setState({  series:this.state.series})  
-        var myHeaders = new Headers();
-     myHeaders.append("Content-Type", "application/json");
-        myHeaders.append("token", "afcc0e85-b2ee-424a-a8d3-fdcf4cc110ca");
-     var requestOptions = {
-        method: 'GET',
-        headers: myHeaders,
-        redirect: 'follow'
-        };
-    fetch('https://desolate-ocean-66919.herokuapp.com/http://anyservice.imassoft.com/96/videos/',
-            requestOptions).then((res)=>res.json()).then(res=>{this.setState({Item:res})})
-      
-    }
-
-    componentWillMount(){
-        return<div style={{color:'white'}}>Loading</div>
-    }
-
 
     render(){
         return(
-            // <div style={{backgroundImage:`url("https://assets.nflxext.com/ffe/siteui/vlv3/92bb3a0b-7e91-40a0-b27b-f2c3ac9ef6e4/5e82ecf0-5873-4e02-8619-2307b8ed65a1/EG-en-20210322-popsignuptwoweeks-perspective_alpha_website_small.jpg")`}}>
-            <div>  
-            <Nav></Nav>
-            <div className="cards">
-                {this.state.Item.map((Item,key)=>{
-
-                     return <Card imgurl ={Item.imgUrl} title = {Item.title} alter={Item.alt} key={key} >
-                            </Card>
-                           })
-                        }
+       
+            <div className="landing-container">  
+                <div className="navbar navbar-inverse">
+                    <a className='"nav-logo'>Netflix</a>
+                    <i class="fab fa-500px"></i>
                 </div>
-                <Footer></Footer>
+                <div className="row">
+                    <div className="col-lg-4"></div>
+                    <h1 className="col-lg-4">jhfhdhfh</h1>
+                </div>
+                <div>
+                    <h1>jhfhdhfh</h1>
+                </div>
+                <div>
+                    <h1>jhfhdhfh</h1>
+                </div>
+                <div>
+                    <h1>jhfhdhfh</h1>
+                </div>
+                <div>
+                    <h1>jhfhdhfh</h1>
+                </div>
+                <div>
+                    <h1>jhfhdhfh</h1>
+                </div>
+                <div>
+                    <h1>jhfhdhfh</h1>
+                </div>
+                <div>
+                    <h1>jhfhdhfh</h1>
+                </div>
+                <div>
+                    <h1>jhfhdhfh</h1>
+                </div>
+                <div>
+                    <h1>jhfhdhfh</h1>
+                </div>
+                <div>
+                    <h1>jhfhdhfh</h1>
+                </div>
+                <div>
+                    <h1>jhfhdhfh</h1>
+                </div>
+                <div>
+                    <h1>jhfhdhfh</h1>
+                </div>
             </div>
         )
     }
