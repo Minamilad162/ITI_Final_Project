@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Carousel, { consts } from 'react-elastic-carousel';
 import './Home.scss';
+import footer from '../../Landing-Page/Footer'
 
 import API from '../../../API';
 import Loader from '../../Shared/Loader/Loader';
+import Footer from '../../Landing-Page/Footer';
 
 export default function Home() {
     const [data, setData] = useState([]);
@@ -85,22 +87,54 @@ export default function Home() {
                         <span className="visually-hidden">Next</span>
                     </button>
                 </div>
+                <div>
+                    <h4 className='title'>
+                        Action
+                    </h4>
+                </div>
+                <Carousel breakPoints={breakPoints} itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className=" carousel">
+                    {data.map((item, index) => (
+                        <Card image_url={'https://i.egycdn.com/pic/WmFwZndlY21Fdk5UbW1qRWNtSHdsdmNtbW1qUHZ3.jpg'} />
+                    ))}
+                </Carousel>
+                <div>
+                    <h4 className='title'>
+                        Comedy
+                    </h4>
+                </div>
+                <Carousel breakPoints={breakPoints} itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className="mt-5 carousel">
+                    {data.map((item, index) => (
+                        <Card image_url={'https://i.ytimg.com/vi/eDHvWrkj0uo/maxresdefault.jpg'} />
+                    ))}
+                </Carousel>
+                <div>
+                    <h4 className='title'>
+                        Drama
+                    </h4>
+                </div>
+                <Carousel breakPoints={breakPoints} itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className="mt-5 carousel">
+                    {data.map((item, index) => (
+                        <Card image_url={'https://wallpaperaccess.com/full/2703652.png'} />
+                    ))}
+                </Carousel>
+                <div>
+                    <h4 className='title'>
+                        Documentaries
+                    </h4>
+                </div>
                 <Carousel breakPoints={breakPoints} itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className="mt-5 carousel">
                     {data.map((item, index) => (
                         <Card image_url={item.image_url} />
                     ))}
                 </Carousel>
-                <Carousel itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className="mt-5 carousel">
-                    {data.map((item, index) => (
-                        <Card image_url={item.image_url} />
-                    ))}
-                </Carousel>
-                <Carousel itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className="mt-5 carousel">
-                    {data.map((item, index) => (
-                        <Card />
-                    ))}
-                </Carousel>
+
+                        <div className='text-center footer'>
+                            <Footer/>
+                        </div>
+
             </div>
+
+           
         );
 }
 

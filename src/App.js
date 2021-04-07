@@ -44,7 +44,7 @@ function App() {
                     <Route path="/admin/login">
                         <Login header={'Admin Login'} endpoint={'admin/login'} />
                     </Route>
-                    <Redirect to="/login" />
+                    <Redirect to="/login"/>
                 </Switch>
             </Router>
         );
@@ -68,8 +68,9 @@ function App() {
                     <Route path="/dashboard">
                         <Dashboard />
                     </Route>
+                    
                     <Route path="/movies">
-                        {/* <Movies /> */}
+                        <Payment/>
                     </Route>
                     <Route path="/series">
                         {/* <Series /> */}

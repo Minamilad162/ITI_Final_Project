@@ -3,6 +3,7 @@ import "./login.scss";
 import API from "../../../API";
 import Nav from '../../Shared/Nav/Nav';
 import { useHistory } from "react-router";
+import Footer from "../../Landing-Page/Footer";
 
 // export default class Login extends Component {
 //     constructor(props) {
@@ -73,6 +74,9 @@ export default function Login({ header, endpoint }) {
                         </form>
                     </div>
                 </div>
+                <div className='text-center footer'>
+                            <Footer/>
+                        </div>
             </div>
         </>
     );

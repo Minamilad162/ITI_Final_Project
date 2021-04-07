@@ -42,7 +42,7 @@ export default function Dashboard() {
                                 <li className="nav-item">
                                     <a className="nav-link" href="#">
                                         <span data-feather="file"></span>
-                                        Orders
+                                        users
                                     </a>
                                 </li>
                                 <li className="nav-item">

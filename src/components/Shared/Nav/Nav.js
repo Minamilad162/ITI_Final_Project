@@ -19,7 +19,7 @@ export default function Nav() {
 
     return (
         <div id="nav">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-black">
                 <div class="container-fluid">
                     <Link class="navbar-brand" to="/">
                         Netflix
@@ -60,19 +60,20 @@ export default function Nav() {
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Dropdown link
+                                        Settings
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                         <li>
-                                            <a class="dropdown-item" href="#">
-                                                Action
-                                            </a>
+                                            <Link class="dropdown-item" to="/Payment">
+                                                Edit Profile
+                                            </Link>
                                         </li>
                                         <li>
                                             <a class="dropdown-item" href="#">
-                                                Another action
+                                               Payment
                                             </a>
                                         </li>
+                                        
                                         <li>
                                             <a class="dropdown-item" onClick={logout} href='#'>
                                                 Logout

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import "./Register.css";
+import "./Register.scss";
 import API from '../../../API';
+import Footer from "../../Landing-Page/Footer";
 
 class Register extends Component {
     constructor(props) {
@@ -29,18 +30,19 @@ class Register extends Component {
 
     render() {
         return (
-            <div id="Register" className=" flex-wrap ">
-                <div className="box">
+            <div id="Register" className=" flex-wrap  ">
+                <div className="box d-flex justify-content-around flex-column align-items-center">
+                    <div className='login-card'>
                     <div>
-                        <h1 className="title text ">Sign Up</h1>
+                        <h1 className="title text label text-center ">Sign Up</h1>
                     </div>
 
-                    <form className="form" onSubmit={this.handleSubmit}>
+                    <form className="form " onSubmit={this.handleSubmit}>
                         <div class="mb-3">
-                            <label className="form-label text">
+                            <label className="form-label text label">
                                 First name
                             </label>
-                            <input
+                            <input className='input'
                                 name={"first_name"}
                                 onChange={this.handleChange}
                                 placeholder="First Name.."
@@ -49,7 +51,7 @@ class Register extends Component {
                         </div>
                         <div class="mb-3">
                             <label
-                                className="form-label text"
+                                className="form-label text label"
                                 value={this.state.email}
                                 onChange={this.changeInput}
                             >
@@ -63,7 +65,7 @@ class Register extends Component {
                             ></input>
                         </div>
                         <div className="mb-3">
-                            <label className="form-label text ">Password</label>
+                            <label className="form-label text label ">Password</label>
                             <input
                                 type="password"
                                 placeholder="Your Password.."
@@ -73,7 +75,7 @@ class Register extends Component {
                             ></input>
                         </div>
                         <div className="mb-3">
-                            <label className="form-label text ">Password</label>
+                            <label className="form-label text label ">Repeat Your Password</label>
                             <input
                                 type="password"
                                 placeholder="Repeat Your Password.."
@@ -86,7 +88,11 @@ class Register extends Component {
                             Submit
                         </button>
                     </form>
+                    </div >
                 </div>
+                <div className='text-center footer'>
+                            <Footer/>
+                        </div>
             </div>
         );
     }
