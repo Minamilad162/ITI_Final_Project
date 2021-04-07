@@ -95,9 +95,9 @@ export default function Payment() {
                             <thead>
                                 <tr>
                                     <th className='Text' style={{width: '34%'}}></th>
-                                    <th className='Text' style={{width: '22%'}}>Free</th>
-                                    <th className='Text' style={{width: '22%'}}>Pro</th>
-                                    <th className='Text' style={{width: '22%'}}>Enterprise</th>
+                                    <th className='Text' style={{width: '22%'}}>Basic</th>
+                                    <th className='Text' style={{width: '22%'}}>Standard</th>
+                                    <th className='Text' style={{width: '22%'}}>Premium</th>
                                 </tr>
                             </thead>
                             <tbody>
