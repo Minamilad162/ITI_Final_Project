@@ -13,8 +13,8 @@ export default function Payment() {
                 <div className="pricing-header p-3 pb-md-4 mx-auto text-center">
                     <h1 className="display-4 fw-normal Text ">Plans</h1>
                     <p className="fs-5 Text ">
-                        Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little
-                        customization.
+                    We offer a variety of plans to meet your needs. The plan you choose will determine the number of devices that you can watch Our Website on, at the same time.
+                    With all of our plans, you can download our Website app on all your favorite devices and watch unlimited movies and TV shows.                    
                     </p>
                 </div>
 
@@ -22,13 +22,13 @@ export default function Payment() {
                     
                     <div className="row row-cols-1 row-cols-md-3 mb-3 text-center">
                         <div className="col">
-                            <div className="card mb-4 rounded-3 shadow-sm">
-                                <div className="card-header py-3">
-                                    <h4 className="my-0 fw-normal">Free</h4>
+                            <div className="card mb-4 rounded-3 shadow-sm border-dark">
+                                <div className="card-header py-3 bg-danger">
+                                    <h4 className="my-0 fw-normal">Basic</h4>
                                 </div>
                                 <div className="card-body">
                                     <h1 className="card-title pricing-card-title">
-                                        $0<small className="text-muted fw-light"></small>
+                                        $10<small className="text-muted fw-light"></small>
                                     </h1>
                                     <ul className="list-unstyled mt-3 mb-4">
                                         <li>10 users included</li>
@@ -36,8 +36,8 @@ export default function Payment() {
                                         <li>Email support</li>
                                         <li>High Video Quality(720)</li>
                                     </ul>
-                                    <button type="button" className="w-100 btn btn-lg btn-outline-primary">
-                                        Sign up for free
+                                    <button type="button" className="w-100 btn btn-lg btn-outline-danger">
+                                    Get Started
                                     </button>
                                 </div>
                             </div>
@@ -45,13 +45,13 @@ export default function Payment() {
                         
                         
                         <div className="col">
-                            <div className="card mb-4 rounded-3 shadow-sm">
-                                <div className="card-header py-3">
-                                    <h4 className="my-0 fw-normal">Pro</h4>
+                            <div className="card mb-4 rounded-3 shadow-sm border-dark">
+                                <div className="card-header py-3 bg-danger">
+                                    <h4 className="my-0 fw-normal">Standard</h4>
                                 </div>
                                 <div className="card-body">
                                     <h1 className="card-title pricing-card-title">
-                                        $15<small className="text-muted fw-light"></small>
+                                        $20<small className="text-muted fw-light"></small>
                                     </h1>
                                     <ul className="list-unstyled mt-3 mb-4">
                                         <li>20 users included</li>
@@ -59,20 +59,20 @@ export default function Payment() {
                                         <li>Priority email support</li>
                                         <li>High Video Quality(1080)</li>
                                     </ul>
-                                    <button type="button" className="w-100 btn btn-lg btn-outline-primary ">
-                                        Get started
+                                    <button type="button" className="w-100 btn btn-lg btn-outline-danger ">
+                                    Get Started
                                     </button>
                                 </div>
                             </div>
                         </div>
                         <div className="col">
-                            <div className="card mb-4 rounded-3 shadow-sm border-primary">
-                                <div className="card-header py-3 text-white bg-primary border-primary">
-                                    <h4 className="my-0 fw-normal">Enterprise</h4>
+                            <div className="card mb-4 rounded-3 shadow-sm border-dark">
+                                <div className="card-header py-3 bg-danger ">
+                                    <h4 className="my-0 fw-normal">Premium</h4>
                                 </div>
                                 <div className="card-body">
                                     <h1 className="card-title pricing-card-title">
-                                        $29<small className="text-muted fw-light"></small>
+                                        $30<small className="text-muted fw-light"></small>
                                     </h1>
                                     <ul className="list-unstyled mt-3 mb-4">
                                         <li>30 users included</li>
@@ -80,8 +80,8 @@ export default function Payment() {
                                         <li>Phone and email support</li>
                                         <li>High Video Quality(4K+HDR)</li>
                                     </ul>
-                                    <button type="button" className="w-100 btn btn-lg btn-outline-primary">
-                                        Contact us
+                                    <button type="button" className="w-100 btn btn-lg btn-outline-danger">
+                                        Get Started
                                     </button>
                                 </div>
                             </div>

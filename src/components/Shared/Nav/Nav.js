@@ -68,12 +68,7 @@ export default function Nav() {
                                                 Edit Profile
                                             </Link>
                                         </li>
-                                        <li>
-                                            <a class="dropdown-item" href="#">
-                                               Payment
-                                            </a>
-                                        </li>
-                                        
+                                       
                                         <li>
                                             <a class="dropdown-item" onClick={logout} href='#'>
                                                 Logout
