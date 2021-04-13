@@ -53,11 +53,11 @@ export default function Nav() {
                                         Series
                                     </Link>
                                 </li>
-                                <li class="nav-item">
+                                {/* <li class="nav-item">
                                     <Link class="nav-link active" aria-current="page" to="/contact-us">
                                         Contact Us
                                     </Link>
-                                </li>
+                                </li> */}
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Settings

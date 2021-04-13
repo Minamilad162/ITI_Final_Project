@@ -58,6 +58,7 @@ export default function Login({ header, endpoint }) {
                                     Password
                                 </label>
                                 <input
+                                type='password'
                                     name="password"
                                     placeholder="Your Password.."
                                     className="form-control input"

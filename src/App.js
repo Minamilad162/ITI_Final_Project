@@ -8,11 +8,13 @@ import RegisterAdmin from './components/Admin/Register/Register';
 import Loader from './components/Shared/Loader/Loader';
 import Nav from './components/Shared/Nav/Nav';
 import Home from './components/User/Home/Home';
-import UpdateUser from './components/Admin/Update/Update';
 
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
-import Dashboard from './components/Dashboard/Dashboard';
+import Dashboard from './components/AdminNavbar/AdminNavbar';
 import LandingPage from './components/Landing-Page/LandingPage';
+import Movies from './components/User/MoviesList/Movies';
+import VideoApp from './components/User/VideoPlayer/Video';
+
 
 function App() {
     const [loaded, setLoaded] = useState(false);
@@ -44,8 +46,10 @@ function App() {
                     <Route path="/admin/login">
                         <Login header={'Admin Login'} endpoint={'admin/login'} />
                     </Route>
-                    <Redirect to="/login"/>
+                    <Redirect to="/login" />
                 </Switch>
+                
+                <a className="position-fixed bottom-0 end-0 btn btn-light" href="#nav">Top</a>
             </Router>
         );
     else
@@ -59,26 +63,21 @@ function App() {
                     <Route path="/landing-page">
                         <LandingPage />
                     </Route>
-                    <Route path="/users/edit/:id">
-                        <UpdateUser />
-                    </Route>
                     <Route path="/Login">
                         <Login header={'Please Sign In..'} endpoint={'auth/login'} />
                     </Route>
-                    <Route path="/dashboard">
+                    {/* <Route path="/dashboard">
                         <Dashboard />
-                    </Route>
-                    
+                    </Route> */}
+
                     <Route path="/movies">
-                        <Payment/>
+                        <Movies />
+                        {/* <VideoApp/> */}
                     </Route>
-                    <Route path="/series">
-                        {/* <Series /> */}
-                    </Route>
-                    <Route path="/contact-us">
-                        {/* <ContactUs /> */}
-                    </Route>
+                    <Route path="/series">{/* <Series /> */}</Route>
+                    <Route path="/contact-us">{/* <ContactUs /> */}</Route>
                 </Switch>
+                <a className="position-fixed bottom-0 end-0 btn btn-light" href="#nav">Top</a>
             </Router>
         );
 }

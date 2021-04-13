@@ -13,7 +13,7 @@ export default function Footer() {
                 <div className="container ">
                     <section className="mb-4">
                         {/* <!-- Facebook --> */}
-                        <a className="btn btn-outline-light btn-floating m-1" href="https://fontawesome.com/icons/address-card?style=light" role="button">
+                        <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button">
                             <i className="fab fa-facebook-f"></i>
                         </a>
 
@@ -48,20 +48,11 @@ export default function Footer() {
     {/* <h5>Features</h5> */}
         <ul className="list-unstyled text-small">
             <li className="mb-1">
-                <a className="link-secondary text-decoration-none" href="https://help.netflix.com/en/node/412">
+                <a className="link-secondary text-decoration-none" href="#">
                     FAQ
                 </a>
             </li>
-            <li className="mb-1">
-                <a className="link-secondary text-decoration-none" href="https://ir.netflix.net/ir-overview/profile/default.aspx">
-                    Investor Relations
-                </a>
-            </li>
-            <li className="mb-1">
-                <a className="link-secondary text-decoration-none" href="https://help.netflix.com/legal/privacy">
-                    Privacy
-                </a>
-            </li>
+            
             <li className="mb-1">
                 <a className="link-secondary text-decoration-none" href="https://fast.com/">
                     Speed Test
@@ -75,25 +66,16 @@ export default function Footer() {
     {/* <h5>Resources</h5> */}
         <ul className="list-unstyled text-small">
             <li className="mb-1">
-                <a className="link-secondary text-decoration-none" href="https://help.netflix.com/en/">
+                <a className="link-secondary text-decoration-none" href="#">
                     Help Center
                 </a>
             </li>
             <li className="mb-1">
-                <a className="link-secondary text-decoration-none" href="https://jobs.netflix.com/">
+                <a className="link-secondary text-decoration-none" href="#">
                     Jobs
                 </a>
             </li>
-            <li className="mb-1">
-                <a className="link-secondary text-decoration-none" href="https://www.netflix.com/eg-en/#">
-                    Cooki Preferences
-                </a>
-            </li>
-            <li className="mb-1">
-                <a className="link-secondary text-decoration-none" href="https://help.netflix.com/legal/notices">
-                    Legal Notices
-                </a>
-            </li>
+           
         </ul>
     </div>
   
@@ -101,25 +83,17 @@ export default function Footer() {
         {/* <h5>About</h5> */}
         <ul className="list-unstyled text-small">
             <li className="mb-1">
-                <a className="link-secondary text-decoration-none" href="https://devices.netflix.com/en/">
+                <a className="link-secondary text-decoration-none" href="#">
                     Ways to Watch
                 </a>
             </li>
+         
             <li className="mb-1">
-                <a className="link-secondary text-decoration-none" href="https://media.netflix.com/en/">
-                    Media Center
-                </a>
-            </li>
-            <li className="mb-1">
-                <a className="link-secondary text-decoration-none" href="https://help.netflix.com/en/contactus">
+                <a className="link-secondary text-decoration-none" href="#">
                     Contact Us
                 </a>
             </li>
-            <li className="mb-1">
-                <a className="link-secondary text-decoration-none" href="https://help.netflix.com/legal/termsofuse">
-                    Terms of Use
-                </a>
-            </li>
+            
         </ul>
     </div>
 </div>
