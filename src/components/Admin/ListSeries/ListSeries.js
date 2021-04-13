@@ -25,12 +25,12 @@ class ListSerieses extends React.Component{
         this.setState({sireses:data});
        // console.log(data)
        // console.log(this.state.sireses)
-           
+
         }
         )
 }
 
-   
+
     // refresh table on changes
     componentDidUpdate(){
         this.refreshList();
@@ -41,19 +41,19 @@ class ListSerieses extends React.Component{
     {
         if(window.confirm('Are you Sure?')){
             fetch(`http://hazemmansour.pythonanywhere.com/api/deleteseries/${pk}`,{
-               
+
                method:'DELETE',
             headers:{
                'Accept':'application/json',
                'content-Type':'application/json'
-                  
+
                },
-               
+
        }).then(res => res.json())
            .then(res =>{
                this.setState({data:res.data})
            })
-        }   
+        }
     }
 
     render(){
@@ -63,7 +63,7 @@ class ListSerieses extends React.Component{
         let editSireseClose=() =>this.setState({editSireseShow:false});
         return(
             <div>
-          <Table className="mt-4" striped="true" bordered="true" hover="true" size="sm" responsive="md" variant="dark">
+          <Table className="mt-1" striped="true" bordered="true" hover="true" size="sm" responsive="md" variant="dark">
               <thead>
                   <tr>
                   <th>Series Id</th>
@@ -79,7 +79,7 @@ class ListSerieses extends React.Component{
               </thead>
               <tbody>
                   {sireses.map(sirese =>
-                  <tr Key ={sirese.id}>  
+                  <tr Key ={sirese.id}>
                   <td>{sirese.id}</td>
                   <td>{sirese.description}</td>
                   <td>{sirese.release_date}</td>
@@ -88,7 +88,7 @@ class ListSerieses extends React.Component{
                   <td>{sirese.language}</td>
                   <td>{sirese.thumbnail_url}</td>
                   <td>{sirese.categories}</td>
-                  
+
                       <ButtonToolbar>
                       <td>
                           <Button className="mr-2" variant="info"
@@ -101,7 +101,7 @@ class ListSerieses extends React.Component{
                           <ButtonToolbar>
                       <td>
                           <Button className="mr-2"
-                              onClick={()=>this.Delete(sirese.id)} variant="danger" 
+                              onClick={()=>this.Delete(sirese.id)} variant="danger"
                               style = {{width :"75px",borderRadius:"30px"}}>
                                   Delete
                           </Button>
@@ -110,7 +110,7 @@ class ListSerieses extends React.Component{
                           onHide={editSireseClose}/>
                            </td>
                       </ButtonToolbar>
-                 
+
                   </tr>
                     )}
               </tbody>
@@ -130,18 +130,18 @@ class ListSerieses extends React.Component{
                   rate = {rate}
                   language = {language}
                   thumbnail_url = {thumbnail_url}
-                  categories = {categories}                 
+                  categories = {categories}
                   />
-    
 
-</ButtonToolbar>          
 
-    
+</ButtonToolbar>
+
+
 </div>
 
 
 
-    
+
         )
     }
 }

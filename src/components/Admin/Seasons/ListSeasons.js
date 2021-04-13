@@ -21,7 +21,7 @@ class ListSeasons extends React.Component{
         //     // "Language":"Arabic","Thumbilurl":"ddfdt","Catgory":"dddd","Videourl":"kyuyystrsf"},
         //     // ]
         // })
-    
+
          fetch(`http://hazemmansour.pythonanywhere.com/api/seasonlist`,
          {method:"GET",
          ContentType:"application/json"})
@@ -30,11 +30,11 @@ class ListSeasons extends React.Component{
              this.setState({seasons:data});
             // console.log(data)
             // console.log(this.state.movies)
-                
+
              }
              )
     }
-    
+
      componentDidUpdate(){
          this.refreshList();
      }
@@ -43,19 +43,19 @@ class ListSeasons extends React.Component{
      {
          if(window.confirm('Are you Sure?')){
              fetch(`http://hazemmansour.pythonanywhere.com/api/deleteseason/${pk}`,{
-                
+
                 method:'DELETE',
              headers:{
                 'Accept':'application/json',
                 'content-Type':'application/json'
-                   
+
                 },
-                
+
         }).then(res => res.json())
             .then(res =>{
                 this.setState({data:res.data})
             })
-         }   
+         }
      }
 
 
@@ -65,7 +65,7 @@ class ListSeasons extends React.Component{
         let editSeasonClose=() =>this.setState({editSeasonShow:false});
         return(
             <div>
-          <Table className="mt-4" striped="true" bordered="true" hover="true" size="sm" responsive="md" variant="dark">
+          <Table className="mt-1" striped="true" bordered="true" hover="true" size="sm" responsive="md" variant="dark">
               <thead>
                   <tr>
                   <th>Season Id</th>
@@ -77,14 +77,14 @@ class ListSeasons extends React.Component{
               </thead>
               <tbody>
                   {seasons.map(season =>
-                  <tr key ={season.id}>  
+                  <tr key ={season.id}>
                   <td>{season.id}</td>
                   <td>{season.number}</td>
                   <td>{season.thumbnail_url}</td>
                   <td>{season.series}</td>
                   <ButtonToolbar>
                   <td>
-                     
+
                           <Button className="mr-1" variant="info"
                           onClick={()=> this.setState({editSeasonhow:true, key:season.id})}
                            style = {{width :"75px",borderRadius:"30px"}}>
@@ -95,14 +95,14 @@ class ListSeasons extends React.Component{
                   <ButtonToolbar>
                   <td>
                           <Button className="mr-1"
-                              onClick={()=>this.Delete(season.id)} variant="danger" 
+                              onClick={()=>this.Delete(season.id)} variant="danger"
                                style = {{width :"75px" ,borderRadius:"30px"}}>
                                   Delete
                           </Button>
 
                           <EditSeasone show = {this.state.editSeasonShow} mykey = {this.state.key}
                           onHide={editSeasonClose}/>
-                     
+
                   </td>
                   </ButtonToolbar>
                   </tr>
@@ -122,16 +122,16 @@ class ListSeasons extends React.Component{
                  thumbnail_url = {thumbnail_url}
                  series = {series}
                   />
-    
 
-</ButtonToolbar>          
 
-    
+</ButtonToolbar>
+
+
 </div>
 
 
 
-    
+
         )
     }
 }

@@ -20,12 +20,12 @@ class ListUsers extends React.Component{
         .then(response => response.json())
         .then(data => {
             this.setState({users:data});
-    
-               
+
+
             }
             )
    }
-   
+
    // refresh table on changes
     componentDidUpdate(){
         this.refreshList();
@@ -35,19 +35,19 @@ class ListUsers extends React.Component{
      {
          if(window.confirm('Are you Sure?')){
              fetch(`http://hazemmansour.pythonanywhere.com/api/deleteuser/${pk}`,{
-                
+
                 method:'DELETE',
              headers:{
                 'Accept':'application/json',
                 'content-Type':'application/json'
-                   
+
                 },
-                
+
         }).then(res => res.json())
             .then(res =>{
                 this.setState({data:res.data})
             })
-         }   
+         }
      }
 
 
@@ -55,7 +55,7 @@ class ListUsers extends React.Component{
         const {users} =this.state;
         return(
             <div>
-          <Table className="mt-4" striped="true" bordered="true" hover="true" size="sm" responsive="md" variant="dark">
+          <Table className="mt-1" striped="true" bordered="true" hover="true" size="sm" responsive="md" variant="dark">
               <thead>
                   <tr>
                   <th>Id</th>
@@ -72,7 +72,7 @@ class ListUsers extends React.Component{
               </thead>
               <tbody>
                   {users.map(user =>
-                  <tr Key ={user.id}>  
+                  <tr Key ={user.id}>
                   <td>{user.id}</td>
                   <td>{user.email}</td>
                   <td>{user.user_type}</td>
@@ -82,7 +82,7 @@ class ListUsers extends React.Component{
                   <td>{user.start_date}</td>
                   <td>{user.end_date}</td>
                   <td>{user.user}</td>
-                  
+
                   <td>
                       <ButtonToolbar>
                           <Button className="mr-2"
@@ -96,8 +96,8 @@ class ListUsers extends React.Component{
                   </tr>
                     )}
               </tbody>
-          </Table>    
-</div>    
+          </Table>
+</div>
         )
     }
 }

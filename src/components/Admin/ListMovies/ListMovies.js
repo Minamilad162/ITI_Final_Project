@@ -21,7 +21,7 @@ class ListMovies extends React.Component{
         //     // "Language":"Arabic","Thumbilurl":"ddfdt","Catgory":"dddd","Videourl":"kyuyystrsf"},
         //     // ]
         // })
-    
+
          fetch('http://hazemmansour.pythonanywhere.com/api/listmovie',
          {method:"GET",
          ContentType:"application/json"})
@@ -30,11 +30,11 @@ class ListMovies extends React.Component{
              this.setState({movies:data});
             // console.log(data)
             // console.log(this.state.movies)
-                
+
              }
              )
     }
-    
+
      componentDidUpdate(){
          this.refreshList();
      }
@@ -43,19 +43,19 @@ class ListMovies extends React.Component{
      {
          if(window.confirm('Are you Sure?')){
              fetch(`http://hazemmansour.pythonanywhere.com/api/deletemovie/${pk}`,{
-                
+
                 method:'DELETE',
              headers:{
                 'Accept':'application/json',
                 'content-Type':'application/json'
-                   
+
                 },
-                
+
         }).then(res => res.json())
             .then(res =>{
                 this.setState({data:res.data})
             })
-         }   
+         }
      }
 
 
@@ -66,7 +66,7 @@ class ListMovies extends React.Component{
         let editMovieClose=() =>this.setState({editMovieShow:false});
         return(
             <div>
-          <Table className="mt-4" striped  bordered  hover  size="sm" responsive="md" variant="dark">
+          <Table className="mt-1" striped  bordered  hover  size="sm" responsive="md" variant="dark">
               <thead>
                   <tr>
                   <th>MovieId</th>
@@ -84,7 +84,7 @@ class ListMovies extends React.Component{
               </thead>
               <tbody>
                   {movies.map(movie =>
-                  <tr key ={movie.id}>  
+                  <tr key ={movie.id}>
                   <td>{movie.id}</td>
                   <td>{movie.description}</td>
                   <td>{movie.release_date}</td>
@@ -97,7 +97,7 @@ class ListMovies extends React.Component{
                   <td>{movie.duration}</td>
                   <ButtonToolbar>
                   <td>
-                     
+
                           <Button className="mr-1" variant="info"
                           onClick={()=> this.setState({editMovieShow:true, key:movie.id})}
                            style = {{width :"75px",borderRadius:"30px"}}>
@@ -108,14 +108,14 @@ class ListMovies extends React.Component{
                   <ButtonToolbar>
                   <td>
                           <Button className="mr-1"
-                              onClick={()=>this.Delete(movie.id)} variant="danger" 
+                              onClick={()=>this.Delete(movie.id)} variant="danger"
                                style = {{width :"75px" ,borderRadius:"30px"}}>
                                   Delete
                           </Button>
 
                           <EditMovies show = {this.state.editMovieShow} mykey = {this.state.key}
                           onHide={editMovieClose}/>
-                     
+
                   </td>
                   </ButtonToolbar>
                   </tr>
@@ -141,16 +141,16 @@ class ListMovies extends React.Component{
                   video_url = {video_url}
                   duration = {duration}
                   />
-    
 
-</ButtonToolbar>          
 
-    
+</ButtonToolbar>
+
+
 </div>
 
 
 
-    
+
         )
     }
 }
