@@ -8,12 +8,15 @@ import RegisterAdmin from './components/Admin/Register/Register';
 import Loader from './components/Shared/Loader/Loader';
 import Nav from './components/Shared/Nav/Nav';
 import Home from './components/User/Home/Home';
-
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
 import Dashboard from './components/AdminNavbar/AdminNavbar';
 import LandingPage from './components/Landing-Page/LandingPage';
 import Movies from './components/User/MoviesList/Movies';
-import VideoApp from './components/User/VideoPlayer/Video';
+import VideoApp from './components/User/VideoPlayer/VideoApp';
+import Series from './components/User/Series/Series';
+import Seasons from "./components/User/Seasons/Seasons";
+import Episodes from "./components/User/Episodes/Episodes"
+import App3 from "./App3";
 
 
 function App() {
@@ -28,7 +31,7 @@ function App() {
         }, 1000);
     }, []);
 
-    if (!loaded) return <Loader />;
+    if (!loaded) return <Loader/>;
     else if (!logged)
         return (
             <Router>
@@ -43,10 +46,14 @@ function App() {
                     <Route path="/register">
                         <Register />
                     </Route>
+                 
                     {/* <Route path="/admin/login">
                         <Login header={'Admin Login'} endpoint={'admin/login'} />
                     </Route> */}
-                    <Redirect to="/login" />
+                    <Redirect to="/login"/>
+                    
+
+
                 </Switch>
                 
                 <a className="position-fixed bottom-0 end-0 btn btn-light" href="#nav">Top</a>
@@ -66,14 +73,26 @@ function App() {
                     <Route path="/Login">
                         <Login header={'Please Sign In..'} endpoint={'/logme'} />
                     </Route>
-                    {/* <Route path="/dashboard">
-                        <Dashboard />
-                    </Route> */}
+                    
 
                     <Route path="/movies">
                         <Movies />
                     </Route>
-                    <Route path="/series"></Route>
+                    <Route path="/series">
+                    <Series/>
+                    </Route>
+                    <Route path="/Dashboard">
+                        <App3/>
+                    </Route>
+                       <Route path="/VideoPlayer">
+                        <VideoApp/>
+                    </Route>
+                    <Route path="/Seasons">
+                       <Seasons/>
+                    </Route>
+                    <Route path="/Episodes">
+                       <Episodes/>
+                    </Route>
                     <Route path="/contact-us"></Route>
                 </Switch>
                 <a className="position-fixed bottom-0 end-0 btn btn-light" href="#nav">Top</a>

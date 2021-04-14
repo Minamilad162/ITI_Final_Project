@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Carousel, { consts } from 'react-elastic-carousel';
+import {  Link, } from 'react-router-dom';
 import './Home.scss';
 import footer from '../../Landing-Page/Footer';
 
@@ -66,18 +67,18 @@ export default function Home() {
                             );
                         })}
                     </div>
-                    <div className="carousel-inner">
+                    <div className="carousel-inner" >
+                 
                         {data[16].map((item, index) => {
                              console.log(data);
                             return index === 0 ? (
                                
-                                <div className="carousel-item active" key={index}>
-                                    <img src={item.thumbnail_url} className="d-block w-100 carousel-img img-fluid" alt="..." />
+                                <div className="carousel-item active" key={index}  onClick={() => {window.localStorage.setItem("video",item.video_url);window.localStorage.setItem("poster",item.thumbnail_url);}}>
+                                   <Link to="/VideoPlayer"> <img src={item.thumbnail_url} className="d-block w-100 carousel-img img-fluid" alt="..." /></Link>
                                 </div>
                             ) : (
-                                <div className="carousel-item" key={index}>
-                                    <img src={item.thumbnail_url} className="d-block w-100 carousel-img img-fluid" alt="..." />
-                                </div>
+                                <div className="carousel-item" key={index} onClick={() => {window.localStorage.setItem("video",item.video_url);window.localStorage.setItem("poster",item.thumbnail_url);}}>
+                                    <Link to="/VideoPlayer"> <img src={item.thumbnail_url} className="d-block w-100 carousel-img img-fluid" alt="..." /></Link>                                </div>
                             );
                         })}
                     </div>
@@ -95,7 +96,11 @@ export default function Home() {
                 </div>
                 <Carousel breakPoints={breakPoints} itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className=" carousel">
                     {data[5].map((item, index) => (
-                        <Card image_url={item.thumbnail_url} />
+                        
+                        <div
+                        onClick={() => {window.localStorage.setItem("video",item.video_url);window.localStorage.setItem("poster",item.thumbnail_url)}}>
+                        <Link to="/VideoPlayer"><Card  image_url={item.thumbnail_url} /></Link> 
+                         </div>
                     ))}
                 </Carousel>
                 <div>
@@ -103,7 +108,11 @@ export default function Home() {
                 </div>
                 <Carousel breakPoints={breakPoints} itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className="mt-5 carousel">
                     {data[6].map((item, index) => (
-                        <Card image_url={item.thumbnail_url} />
+                        
+                        <div
+                        onClick={() => {window.localStorage.setItem("video",item.video_url);window.localStorage.setItem("poster",item.thumbnail_url)}}>
+                        <Link to="/VideoPlayer"><Card  image_url={item.thumbnail_url} /></Link> 
+                         </div>
                     ))}
                 </Carousel>
                 <div>
@@ -111,7 +120,11 @@ export default function Home() {
                 </div>
                 <Carousel breakPoints={breakPoints} itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className="mt-5 carousel">
                     {data[4].map((item, index) => (
-                        <Card image_url={item.thumbnail_url} />
+                        
+                        <div
+                        onClick={() => {window.localStorage.setItem("video",item.video_url);window.localStorage.setItem("poster",item.thumbnail_url)}}>
+                        <Link to="/VideoPlayer"><Card  image_url={item.thumbnail_url} /></Link> 
+                         </div>
                     ))}
                 </Carousel>
                 <div>
@@ -119,7 +132,11 @@ export default function Home() {
                 </div>
                 <Carousel breakPoints={breakPoints} itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className="mt-5 carousel">
                     {data[1].map((item, index) => (
-                        <Card image_url={item.thumbnail_url} />
+                        
+                        <div
+                        onClick={() => {window.localStorage.setItem("video",item.video_url);window.localStorage.setItem("poster",item.thumbnail_url)}}>
+                        <Link to="/VideoPlayer"><Card  image_url={item.thumbnail_url} /></Link> 
+                         </div>
                     ))}
                 </Carousel>
                 <div>
@@ -127,7 +144,11 @@ export default function Home() {
                 </div>
                 <Carousel breakPoints={breakPoints} itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className="mt-5 carousel">
                     {data[12].map((item, index) => (
-                        <Card image_url={item.thumbnail_url} />
+                        
+                        <div
+                        onClick={() => {window.localStorage.setItem("video",item.video_url);window.localStorage.setItem("poster",item.thumbnail_url)}}>
+                        <Link to="/VideoPlayer"><Card  image_url={item.thumbnail_url} /></Link> 
+                         </div>
                     ))}
                 </Carousel>
 

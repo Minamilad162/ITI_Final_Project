@@ -11,9 +11,9 @@ import ListEpisodes from './components/Admin/Episodes/ListEpisodes';
 
 import Navbar from './components/AdminNavbar/AdminNavbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import VideoApp from './components/User/VideoPlayer/Video';
+import VideoApp from './components/User/VideoPlayer/VideoApp';
 
-class App2 extends React.Component {
+class App3 extends React.Component {
     render() {
         return (
             <div>
@@ -54,4 +54,4 @@ class App2 extends React.Component {
     }
 }
 
-export default App2;
+export default App3;

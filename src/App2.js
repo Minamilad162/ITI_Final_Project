@@ -54,8 +54,8 @@ class App2 extends React.Component{
                  <Switch>
         
                     <Route exact path="/" render={() => this.ifUserSignedIn(Home)}/>
-                    <Link to="/"></Link> 
-        
+                     
+
                  </Switch>
            </BrowserRouter>
            </div>
