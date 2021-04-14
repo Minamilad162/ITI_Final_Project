@@ -7,8 +7,8 @@ class Home extends React.Component{
         return(
             <div id='Home'>
                 <div className={'m-5 p-5'}>
-                    <h1 className="display-1">Hello Admin!</h1>
-                    <h1 className="display-2">Welcome to your dashboard</h1>
+                    <h1 className="display-1 title">Hello Admin!</h1>
+                    <h1 className="display-2 title">Welcome to your dashboard</h1>
                 </div>
 
 
