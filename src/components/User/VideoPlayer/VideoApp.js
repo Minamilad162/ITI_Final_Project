@@ -1,8 +1,8 @@
 // export default VideoPlayer;
 import React, { Component } from 'react';
 import VideoPlayer from 'react-video-js-player';
-// import "./VideoPlayer.scss";
- 
+import "./VideoPlayer.scss";
+
 class VideoApp extends Component {
     player = {}
     state = {
@@ -11,45 +11,42 @@ class VideoApp extends Component {
             poster: window.localStorage.getItem("poster")
         }
     }
- 
+
     onPlayerReady(player){
         console.log("Player is ready: ", player);
         this.player = player;
     }
- 
+
     onVideoPlay(duration){
         console.log("Video played at: ", duration);
     }
- 
+
     onVideoPause(duration){
         console.log("Video paused at: ", duration);
     }
- 
+
     onVideoTimeUpdate(duration){
         console.log("Time updated: ", duration);
     }
- 
+
     onVideoSeeking(duration){
         console.log("Video seeking: ", duration);
     }
- 
+
     onVideoSeeked(from, to){
         console.log(`Video seeked from ${from} to ${to}`);
     }
- 
+
     onVideoEnd(){
         console.log("Video ended");
     }
- 
+
     render() {
         return (
-            <div>
+            <div id={'video-player'}>
                 <VideoPlayer
-                    // controls={true}
                     src={this.state.video.src}
                     poster={this.state.video.poster}
-                    width="720"
-                    height="420"
                     onReady={this.onPlayerReady.bind(this)}
                     onPlay={this.onVideoPlay.bind(this)}
                     onPause={this.onVideoPause.bind(this)}

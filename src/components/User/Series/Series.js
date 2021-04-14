@@ -14,9 +14,9 @@ export default function Series() {
         API.get('listseries').then((response) => {
             const obj = [];
             response.forEach(item => {
-                 
-                    obj.push(item);
-                
+
+                obj.push(item);
+
             })
             setData(obj);
         });
@@ -66,11 +66,11 @@ export default function Series() {
                     </div>
                     <div className="carousel-inner">
                         {data.map((item, index) => {
-                             console.log(data);
+                            console.log(data);
                             return index === 0 ? (
-                               
+
                                 <div className="carousel-item active" key={index}>
-                                   <img src={item.thumbnail_url} className="d-block w-100 carousel-img img-fluid" alt="..." /> 
+                                    <img src={item.thumbnail_url} className="d-block w-100 carousel-img img-fluid" alt="..." />
                                 </div>
                             ) : (
                                 <div className="carousel-item" key={index}>
@@ -80,11 +80,11 @@ export default function Series() {
                         })}
                     </div>
                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="carousel-control-prev-icon" aria-hidden="true"/>
                         <span className="visually-hidden">Previous</span>
                     </button>
                     <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="carousel-control-next-icon" aria-hidden="true"/>
                         <span className="visually-hidden">Next</span>
                     </button>
                 </div>
@@ -93,13 +93,13 @@ export default function Series() {
                 </div>
                 <div className="SeriesContainer d-flex flex-wrap ">
                     {data.map((item, index) => (
-                        <div onClick={() => {window.localStorage.setItem("serieid",item.id);window.localStorage.setItem("poster",item.thumbnail_url)}}>
-                       <Link to="/Seasons"><Card image_url={item.thumbnail_url}/></Link>
-                       </div>
+                        <Link to={`/series/${item.id}`}>
+                            <Card image_url={item.thumbnail_url} desc={item.description}/>
+                        </Link>
                     ))}
-                </div>    
-                
-                   
+                </div>
+
+
                 <div className="text-center footer">
                     <Footer />
                 </div>
@@ -107,10 +107,17 @@ export default function Series() {
         );
 }
 
-function Card({ image_url }) {
+function Card({ image_url, desc }) {
     return (
-        <div style={{ width: '18rem' }}>
-            <img src={image_url} class="card-img-top" alt="..." />
+        <div style={{ width: '18rem' }} className={'m-1 mb-4'}>
+
+            <div className="card bg-dark" style={{width: '18rem'}}>
+                <img src={image_url} className="card-img-top" alt="..." />
+                    <div className="card-body">
+                        <p className="card-text">{desc}</p>
+                    </div>
+            </div>
+
         </div>
     );
 }

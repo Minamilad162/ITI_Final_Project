@@ -46,16 +46,16 @@ function App() {
                     <Route path="/register">
                         <Register />
                     </Route>
-                 
+
                     {/* <Route path="/admin/login">
                         <Login header={'Admin Login'} endpoint={'admin/login'} />
                     </Route> */}
                     <Redirect to="/login"/>
-                    
+
 
 
                 </Switch>
-                
+
                 <a className="position-fixed bottom-0 end-0 btn btn-light" href="#nav">Top</a>
             </Router>
         );
@@ -73,27 +73,30 @@ function App() {
                     <Route path="/Login">
                         <Login header={'Please Sign In..'} endpoint={'/logme'} />
                     </Route>
-                    
+
 
                     <Route path="/movies">
                         <Movies />
                     </Route>
-                    <Route path="/series">
-                    <Series/>
+                    <Route exact path="/series">
+                        <Series/>
+                    </Route>
+                    <Route path="/series/:id">
+                        <Seasons />
                     </Route>
                     <Route path="/Dashboard">
                         <App3/>
                     </Route>
-                       <Route path="/VideoPlayer">
+                    <Route path="/VideoPlayer">
                         <VideoApp/>
                     </Route>
                     <Route path="/Seasons">
-                       <Seasons/>
+                        <Seasons/>
                     </Route>
-                    <Route path="/Episodes">
-                       <Episodes/>
+                    <Route path="/Episodes/:id">
+                        <Episodes/>
                     </Route>
-                    <Route path="/contact-us"></Route>
+                    <Route path="/contact-us"/>
                 </Switch>
                 <a className="position-fixed bottom-0 end-0 btn btn-light" href="#nav">Top</a>
             </Router>

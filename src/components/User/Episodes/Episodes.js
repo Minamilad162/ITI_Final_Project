@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Carousel, { consts } from 'react-elastic-carousel';
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
+import {Link, useParams } from 'react-router-dom';
 import "./Episodes.scss";
 
 import API from '../../../API';
@@ -8,18 +8,32 @@ import Loader from '../../Shared/Loader/Loader';
 import Footer from "../../Landing-Page/Footer";
 
 export default function Episodes() {
+
     const [data, setData] = useState({1:[]});
 
+    const {id} = useParams();
+
+
+    // useEffect( ()=> {}, []);
+    //ComponentWillMount
+
+    // useEffect(()=> {});
+    //ComponentWillUpdate
+
+    // useEffect(()=>{}, [id])
+    // the first function will run the first time when the component renders 1
+    // and will run each time the ID changes
+
     useEffect(() => {
-        API.get(`listepisodes/${localStorage.getItem("seasonid")}`).then((response) => {
-            const obj = [];
-            response.forEach(item => {
-                 
+        API.get(`listepisodes/${id}`)
+            .then((response) => {
+                const obj = [];
+                response.forEach(item => {
                     obj.push(item);
-                
-            })
-            setData(obj);
-        });
+                })
+                console.log(obj)
+                setData(obj);
+            });
     }, []);
 
 
@@ -40,7 +54,7 @@ export default function Episodes() {
         return pointer;
     }
 
-    
+
 
     if (data[1].length === 0) return <Loader />;
     else
@@ -58,11 +72,11 @@ export default function Episodes() {
                     </div>
                     <div className="carousel-inner">
                         {data.map((item, index) => {
-                             console.log(data);
+                            console.log(data);
                             return index === 0 ? (
-                               
+
                                 <div className="carousel-item active" key={index}>
-                                   <img src={item.thumbnail_url} className="d-block w-100 carousel-img img-fluid" alt="..." /> 
+                                    <img src={item.thumbnail_url} className="d-block w-100 carousel-img img-fluid" alt="..." />
                                 </div>
                             ) : (
                                 <div className="carousel-item" key={index}>
@@ -86,12 +100,12 @@ export default function Episodes() {
                 <div className="SeriesContainer d-flex flex-wrap ">
                     {data.map((item, index) => (
                         <div onClick={() => {window.localStorage.setItem("video",item.video_url);window.localStorage.setItem("poster",item.thumbnail_url)}}>
-                       <Link to="/VideoPlayer"><Card image_url={item.thumbnail_url} title={item.code}/></Link>
-                       </div>
+                            <Link to="/VideoPlayer"><Card image_url={item.thumbnail_url} title={item.code}/></Link>
+                        </div>
                     ))}
-                </div>    
-                
-                   
+                </div>
+
+
                 <div className="text-center footer">
                     <Footer />
                 </div>
@@ -103,7 +117,7 @@ function Card({ image_url, title }) {
     return (
         <div style={{ width: '18rem' }}>
             <img src={image_url} class="card-img-top" alt="..." />
-           <span>{title}</span>
+            <span>{title}</span>
         </div>
     );
 }

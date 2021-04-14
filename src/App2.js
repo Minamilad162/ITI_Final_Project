@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter, Switch, Route, Link} from 'react-router-dom';
 import {Dropdown} from 'react-bootstrap';
 import './App.css';
-import Home from '../../frontend/src/components/User/Home/Home';
+import Home from './components/User/Home/Home';
 
 
 class App2 extends React.Component{
@@ -21,7 +21,7 @@ class App2 extends React.Component{
                 // where we can intlize auth
                 window.gapi.auth2.init({
                     // value of google api client
-                    client_id:'452816980959-gjk4lis5m92tidj66t8tmbv1iivrursk.apps.googleusercontent.com' 
+                    client_id:'452816980959-gjk4lis5m92tidj66t8tmbv1iivrursk.apps.googleusercontent.com'
 
                 })
                 // once it loaded
@@ -43,7 +43,7 @@ class App2 extends React.Component{
     componentDidMount(){
         console.log('Loading')
         this.insertGapiScript();
- 
+
     }
 
     render(){
@@ -52,15 +52,15 @@ class App2 extends React.Component{
         <div>
         <BrowserRouter>
                  <Switch>
-        
+
                     <Route exact path="/" render={() => this.ifUserSignedIn(Home)}/>
-                     
+
 
                  </Switch>
            </BrowserRouter>
            </div>
         <div className="GoogleAuth">
-           
+
            <div id="loginButton">sign in with google</div>
 
 

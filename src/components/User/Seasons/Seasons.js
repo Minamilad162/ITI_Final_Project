@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Carousel, { consts } from 'react-elastic-carousel';
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import "./Seasons.scss";
 
 import API from '../../../API';
@@ -10,13 +10,15 @@ import Footer from "../../Landing-Page/Footer";
 export default function Seasons() {
     const [data, setData] = useState({1:[]});
 
+    const {id} = useParams();
+
     useEffect(() => {
-        API.get(`listseason/${localStorage.getItem("serieid")}`).then((response) => {
+        API.get(`listseason/${id}`).then((response) => {
             const obj = [];
             response.forEach(item => {
-                 
-                    obj.push(item);
-                
+
+                obj.push(item);
+
             })
             setData(obj);
         });
@@ -40,7 +42,7 @@ export default function Seasons() {
         return pointer;
     }
 
-    
+
 
     if (data[1].length === 0) return <Loader />;
     else
@@ -58,11 +60,11 @@ export default function Seasons() {
                     </div>
                     <div className="carousel-inner">
                         {data.map((item, index) => {
-                             console.log(data);
+                            console.log(data);
                             return index === 0 ? (
-                               
+
                                 <div className="carousel-item active" key={index}>
-                                   <img src={item.thumbnail_url} className="d-block w-100 carousel-img img-fluid" alt="..." /> 
+                                    <img src={item.thumbnail_url} className="d-block w-100 carousel-img img-fluid" alt="..." />
                                 </div>
                             ) : (
                                 <div className="carousel-item" key={index}>
@@ -85,15 +87,13 @@ export default function Seasons() {
                 </div>
                 <div className="SeriesContainer d-flex flex-wrap ">
                     {data.map((item, index) => (
-                        <div onClick={() => {window.localStorage.setItem("seasonid",item.id);window.localStorage.setItem("poster",item.thumbnail_url)}}>
-                       <Link to="/Episodes"><Card image_url={item.thumbnail_url} title={item.code}
-                       
-                       /></Link>
-                       </div>
+                        <Link to={`/Episodes/${item.id}`}>
+                            <Card image_url={item.thumbnail_url} title={item.code}/>
+                        </Link>
                     ))}
-                </div>    
-                
-                   
+                </div>
+
+
                 <div className="text-center footer">
                     <Footer />
                 </div>
@@ -105,7 +105,7 @@ function Card({ image_url, title }) {
     return (
         <div style={{ width: '18rem' }}>
             <img src={image_url} class="card-img-top" alt="..." />
-           <span>{title}</span>
+            <span>{title}</span>
         </div>
     );
 }
