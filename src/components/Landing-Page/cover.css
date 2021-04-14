@@ -115,7 +115,7 @@ body {
 }
 .accordion-button{
   color: white;
-  background-color: unset;
+  /* background-color: unset; */
 }
 .c{
   background-color: black;

@@ -14,10 +14,10 @@ export default function LandingPage() {
                     <p className="lead">Watch anywhere. Cancel anytime.</p>
                     <p className="lead">Ready to watch? Enter your email to create or restart your membership.</p>
                     <p className="lead ">
-                        <Link to="/Register" className="btn btn-lg btn-secondary fw-bold border-black button ">
+                        <Link to="/Register" className="btn btn-lg btn-danger fw-bold border-black button ">
                             Register
                         </Link>
-                        <Link to="/Login" className="btn btn-lg btn-secondary fw-bold border-black button2  m-4">
+                        <Link to="/Login" className="btn btn-lg btn-warning fw-bold border-black button2  m-4">
                             Login
                         </Link>
                     </p>

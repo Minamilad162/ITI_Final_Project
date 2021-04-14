@@ -126,7 +126,7 @@ export default function Home() {
                     <h4 className="title">Series</h4>
                 </div>
                 <Carousel breakPoints={breakPoints} itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className="mt-5 carousel">
-                    {data[1].map((item, index) => (
+                    {data[12].map((item, index) => (
                         <Card image_url={item.thumbnail_url} />
                     ))}
                 </Carousel>
