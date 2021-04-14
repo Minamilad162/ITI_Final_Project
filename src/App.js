@@ -38,14 +38,14 @@ function App() {
                         <LandingPage />
                     </Route>
                     <Route path="/login">
-                        <Login header={'Log In..'} endpoint={'login'} />
+                        <Login header={'Log In..'} endpoint={'logme'} />
                     </Route>
                     <Route path="/register">
                         <Register />
                     </Route>
-                    <Route path="/admin/login">
+                    {/* <Route path="/admin/login">
                         <Login header={'Admin Login'} endpoint={'admin/login'} />
-                    </Route>
+                    </Route> */}
                     <Redirect to="/login" />
                 </Switch>
                 
@@ -64,7 +64,7 @@ function App() {
                         <LandingPage />
                     </Route>
                     <Route path="/Login">
-                        <Login header={'Please Sign In..'} endpoint={'auth/login'} />
+                        <Login header={'Please Sign In..'} endpoint={'/logme'} />
                     </Route>
                     {/* <Route path="/dashboard">
                         <Dashboard />
@@ -72,10 +72,9 @@ function App() {
 
                     <Route path="/movies">
                         <Movies />
-                        {/* <VideoApp/> */}
                     </Route>
-                    <Route path="/series">{/* <Series /> */}</Route>
-                    <Route path="/contact-us">{/* <ContactUs /> */}</Route>
+                    <Route path="/series"></Route>
+                    <Route path="/contact-us"></Route>
                 </Switch>
                 <a className="position-fixed bottom-0 end-0 btn btn-light" href="#nav">Top</a>
             </Router>

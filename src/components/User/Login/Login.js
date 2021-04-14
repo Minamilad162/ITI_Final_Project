@@ -4,15 +4,9 @@ import API from "../../../API";
 import Nav from '../../Shared/Nav/Nav';
 import { useHistory } from "react-router";
 import Footer from "../../Landing-Page/Footer";
+import App2 from "../../../App2";
 
-// export default class Login extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             active: false
-//         }
-//     }
-// }
+
 
 export default function Login({ header, endpoint }) {
     const [data, setData] = useState({});
@@ -27,11 +21,11 @@ export default function Login({ header, endpoint }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await API.post(endpoint, data);
+        console.log(JSON.stringify(data));
+        const response = await API.post(endpoint, JSON.stringify(data));
         localStorage.setItem("token", response.token);
         window.location.replace('/');
     };
-
     return (
         <>
             <div id="login">
@@ -44,11 +38,11 @@ export default function Login({ header, endpoint }) {
                         <form className="form p-3" onSubmit={handleSubmit}>
                             <div class="mb-3">
                                 <label className="form-label text">
-                                    Email address
+                                  Username
                                 </label>
                                 <input
-                                    name="email"
-                                    placeholder="Email.."
+                                    name="username"
+                                    placeholder="Username"
                                     className="form-control input"
                                     onChange={handleChange}
                                 ></input>
@@ -72,6 +66,14 @@ export default function Login({ header, endpoint }) {
                             >
                                 Log in
                             </button>
+
+                            <div>
+                            <h1 className="title text">
+                                <App2/>
+                                </h1>
+                            </div>
+                            
+
                         </form>
                     </div>
                 </div>

@@ -112,7 +112,7 @@ export default function Footer() {
                 <div className="text-center p-3">
                     © 2021 Copyright:
                     <a className="text-white" href="https://www.netflix.com/browse">
-                        Netflix.com
+                        CinemaFy
                     </a>
                 </div>
             </footer>

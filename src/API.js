@@ -26,7 +26,7 @@ const API = {
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
-                Authorization: `Bearer ${token}`,
+                // Authorization: `Token ${token}`,
             },
         });
 
@@ -41,7 +41,7 @@ const API = {
                 headers: {
                     Accept: 'application/json',
                     'Content-Type': 'application/json',
-                    Authorization: `Bearer ${token}`,
+                    Authorization: `Token ${token}`,
                 },
             });
 

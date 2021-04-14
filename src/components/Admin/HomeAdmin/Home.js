@@ -5,15 +5,18 @@ import Income from './Income';
 class Home extends React.Component{
     render(){
         return(
-          <div id='Home'>
-      <h1 className='ftitle m-4 d-flex justify-content-around flex-column align-items-center'>Welcome Admin</h1>
+            <div id='Home'>
+                <div className={'m-5 p-5'}>
+                    <h1 className="display-1">Hello Admin!</h1>
+                    <h1 className="display-2">Welcome to your dashboard</h1>
+                </div>
 
-      
-            <Income/>
+
+                {/*<Income/>*/}
 
 
 
-      </div>
+            </div>
         )
     }
 }

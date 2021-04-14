@@ -3,8 +3,8 @@ import "./Register.scss";
 import API from '../../../API';
 import Footer from "../../Landing-Page/Footer";
 
-class Register extends Component {
-    constructor(props,id) {
+class Register2 extends Component {
+    constructor(props) {
         super(props);
         this.state = {};
         this.handleChange = this.handleChange.bind(this);
@@ -21,8 +21,8 @@ class Register extends Component {
     async handleSubmit(e) {
         e.preventDefault();
         try {
-            const response = await API.post('register/', JSON.stringify(this.state));   
-            window.location.replace('/Register2');
+            const response = await API.post('register', this.state);   
+            window.location.replace('/login');
         } catch(err) {
             alert('Something went wrong');
         }
@@ -38,18 +38,6 @@ class Register extends Component {
                     </div>
 
                     <form className="form " onSubmit={this.handleSubmit}>
-                    <div class="mb-3">
-                            <label className="form-label text label">
-                                    Email
-                            </label>
-                            <input className='input'
-                                name='email'
-                                onChange={this.handleChange}
-                                placeholder="Email"
-                                className="form-control input"
-                            />
-                        </div>
-                        
                         <div class="mb-3">
                             <label className="form-label text label">
                                 username
@@ -61,26 +49,38 @@ class Register extends Component {
                                 className="form-control input"
                             />
                         </div>
-                        
+                        <div class="mb-3">
+                            <label
+                                className="form-label text label"
+                                value={this.state.email}
+                                onChange={this.changeInput}
+                            >
+                                Last name
+                            </label>
+                            <input
+                                placeholder="Last Name.."
+                                className="form-control input"
+                                name={"last_name"}
+                                onChange={this.handleChange}
+                            ></input>
+                        </div>
                         <div className="mb-3">
                             <label className="form-label text label ">Password</label>
                             <input
                                 type="password"
                                 placeholder="Your Password.."
                                 className="form-control input"
-                                name="password"
+                                name={"password"}
                                 onChange={this.handleChange}
                             ></input>
                         </div>
-
-                        
                         <div className="mb-3">
                             <label className="form-label text label ">Repeat Your Password</label>
                             <input
                                 type="password"
                                 placeholder="Repeat Your Password.."
                                 className="form-control input"
-                                name="password2"
+                                name={"confirm_password"}
                                 onChange={this.handleChange}
                             ></input>
                         </div>
@@ -92,10 +92,10 @@ class Register extends Component {
                 </div>
                 <div className='text-center footer'>
                             <Footer/>
-            </div>
+                        </div>
             </div>
         );
     }
 }
 
-export default Register;
+export default Register2;

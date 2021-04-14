@@ -22,7 +22,7 @@ export default function Nav() {
             <nav class="navbar navbar-expand-lg navbar-dark bg-black">
                 <div class="container-fluid">
                     <Link class="navbar-brand" to="/">
-                        Netflix
+                        CinemaFy
                     </Link>
                     <button
                         class="navbar-toggler"
