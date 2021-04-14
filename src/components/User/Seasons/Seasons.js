@@ -81,12 +81,14 @@ export default function Seasons() {
                     </button>
                 </div>
                 <div>
-                    <h4 className="title">Seasons</h4>
+                    <h4 className="title">Episodes</h4>
                 </div>
                 <div className="SeriesContainer d-flex flex-wrap ">
                     {data.map((item, index) => (
                         <div onClick={() => {window.localStorage.setItem("seasonid",item.id);window.localStorage.setItem("poster",item.thumbnail_url)}}>
-                       <Link to="/Episodes"><Card image_url={item.thumbnail_url}/></Link>
+                       <Link to="/Episodes"><Card image_url={item.thumbnail_url} title={item.code}
+                       
+                       /></Link>
                        </div>
                     ))}
                 </div>    
@@ -99,10 +101,11 @@ export default function Seasons() {
         );
 }
 
-function Card({ image_url }) {
+function Card({ image_url, title }) {
     return (
         <div style={{ width: '18rem' }}>
             <img src={image_url} class="card-img-top" alt="..." />
+           <span>{title}</span>
         </div>
     );
 }
