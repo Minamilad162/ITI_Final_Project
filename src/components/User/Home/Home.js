@@ -20,6 +20,7 @@ export default function Home() {
                     obj[item.categories[0]].push(item);
                 }
             })
+            console.log(obj);
             setData(obj);
         });
     }, []);
@@ -58,7 +59,7 @@ export default function Home() {
                 <div id="carouselExampleIndicators" className="carousel slide carousel-fade  " data-bs-ride="carousel">
                     <h4 className="title">Trending Now</h4>
                     <div className="carousel-indicators">
-                        {data[2].map((item, index) => {
+                        {data[16].map((item, index) => {
                             return index === 0 ? (
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                             ) : (
@@ -67,10 +68,9 @@ export default function Home() {
                         })}
                     </div>
                     <div className="carousel-inner">
-                        {data[1].map((item, index) => {
-                             console.log(data);
+                        {data[16].map((item, index) => {
                             return index === 0 ? (
-                               
+
                                 <div className="carousel-item active" key={index}>
                                     <img src={item.thumbnail_url} className="d-block w-100 carousel-img img-fluid" alt="..." />
                                 </div>
@@ -94,7 +94,7 @@ export default function Home() {
                     <h4 className="title">Action</h4>
                 </div>
                 <Carousel breakPoints={breakPoints} itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className=" carousel">
-                    {data[3].map((item, index) => (
+                    {data[1].map((item, index) => (
                         <Card image_url={item.thumbnail_url} />
                     ))}
                 </Carousel>
@@ -102,7 +102,7 @@ export default function Home() {
                     <h4 className="title">Comedy</h4>
                 </div>
                 <Carousel breakPoints={breakPoints} itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className="mt-5 carousel">
-                    {data[1].map((item, index) => (
+                    {data[2].map((item, index) => (
                         <Card image_url={item.thumbnail_url} />
                     ))}
                 </Carousel>
@@ -110,7 +110,7 @@ export default function Home() {
                     <h4 className="title">Drama</h4>
                 </div>
                 <Carousel breakPoints={breakPoints} itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className="mt-5 carousel">
-                    {data[1].map((item, index) => (
+                    {data[3].map((item, index) => (
                         <Card image_url={item.thumbnail_url} />
                     ))}
                 </Carousel>
@@ -118,14 +118,14 @@ export default function Home() {
                     <h4 className="title">Documentaries</h4>
                 </div>
                 <Carousel breakPoints={breakPoints} itemPadding={[0, 0]} itemsToShow={5} pagination={false} renderArrow={myArrow} className="mt-5 carousel">
-                    {data[2].map((item, index) => (
+                    {data[4].map((item, index) => (
                         <Card image_url={item.thumbnail_url} />
                         // <Card image_url={item.image_url} />
                     ))}
                 </Carousel>
 
                 <div className="text-center footer">
-                    <Footer />
+                    <Footerg />
                 </div>
             </div>
         );
