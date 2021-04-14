@@ -99,7 +99,7 @@ export default function Home() {
                         
                         <div
                         onClick={() => {window.localStorage.setItem("video",item.video_url);window.localStorage.setItem("poster",item.thumbnail_url)}}>
-                        <Link to="/VideoPlayer"><Card  image_url={item.thumbnail_url} /></Link> 
+                        <Link to="/VideoPlayer"><Card  image_url={item.thumbnail_url} Descrip={item.description} /></Link> 
                          </div>
                     ))}
                 </Carousel>
@@ -111,7 +111,7 @@ export default function Home() {
                         
                         <div
                         onClick={() => {window.localStorage.setItem("video",item.video_url);window.localStorage.setItem("poster",item.thumbnail_url)}}>
-                        <Link to="/VideoPlayer"><Card  image_url={item.thumbnail_url} /></Link> 
+                        <Link to="/VideoPlayer"><Card  image_url={item.thumbnail_url} Descrip={item.description} /></Link> 
                          </div>
                     ))}
                 </Carousel>
@@ -123,7 +123,7 @@ export default function Home() {
                         
                         <div
                         onClick={() => {window.localStorage.setItem("video",item.video_url);window.localStorage.setItem("poster",item.thumbnail_url)}}>
-                        <Link to="/VideoPlayer"><Card  image_url={item.thumbnail_url} /></Link> 
+                        <Link to="/VideoPlayer"><Card  image_url={item.thumbnail_url} Descrip={item.description} /></Link> 
                          </div>
                     ))}
                 </Carousel>
@@ -135,7 +135,7 @@ export default function Home() {
                         
                         <div
                         onClick={() => {window.localStorage.setItem("video",item.video_url);window.localStorage.setItem("poster",item.thumbnail_url)}}>
-                        <Link to="/VideoPlayer"><Card  image_url={item.thumbnail_url} /></Link> 
+                        <Link to="/VideoPlayer"><Card  image_url={item.thumbnail_url} Descrip={item.description} /></Link> 
                          </div>
                     ))}
                 </Carousel>
@@ -147,7 +147,7 @@ export default function Home() {
                         
                         <div
                         onClick={() => {window.localStorage.setItem("video",item.video_url);window.localStorage.setItem("poster",item.thumbnail_url)}}>
-                        <Link to="/VideoPlayer"><Card  image_url={item.thumbnail_url} /></Link> 
+                        <Link to="/VideoPlayer"><Card  image_url={item.thumbnail_url} Descrip={item.description} /></Link> 
                          </div>
                     ))}
                 </Carousel>
@@ -159,10 +159,11 @@ export default function Home() {
         );
 }
 
-function Card({ image_url }) {
+function Card({ image_url, Descrip }) {
     return (
         <div style={{ width: '18rem' }}>
             <img src={image_url} class="card-img-top" alt="..." />
+            <span>{Descrip}</span>
         </div>
     );
 }
