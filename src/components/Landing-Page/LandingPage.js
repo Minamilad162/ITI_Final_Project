@@ -17,7 +17,7 @@ export default function LandingPage() {
                         <Link to="/Register" className="btn btn-lg btn-danger fw-bold border-black button ">
                             Register
                         </Link>
-                        <Link to="/Login" className="btn btn-lg btn-warning fw-bold border-black button2  m-4">
+                        <Link to="/Login" className="btn btn-lg btn-primary fw-bold border-black button2  m-4">
                             Login
                         </Link>
                     </p>

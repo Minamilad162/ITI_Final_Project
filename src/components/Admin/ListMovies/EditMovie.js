@@ -74,26 +74,26 @@ class EditMovies extends React.Component{
                                      <Form.Label>MovieId</Form.Label>
                                      <Form.Control type="text" name="id"  placeholder="id" required
                                      disabled
-                                    required value={this.props.mykey}/>
+                                     value={this.props.mykey}/>
                                    
                                      </Form.Group>
 
                                      <Form.Group controlId="description">
                                      <Form.Label>Description</Form.Label>
                                      <Form.Control type="text" name="description" placeholder="description"
-                                    required value={this.props.description}/>
+                                     value={this.props.description}/>
                                      </Form.Group>
 
                                      <Form.Group controlId="release_date">
                                      <Form.Label>Release date</Form.Label>
                                      <Form.Control type="date" name="release_date"  placeholder="release_date"
-                                    required value={this.props.release_date}/> 
+                                        value={this.props.release_date}/> 
                                      </Form.Group>
 
                                  <Form.Group controlId="title">
                                      <Form.Label>Title</Form.Label>
                                      <Form.Control type="text" name="title"  placeholder="Movietitle" 
-                                    required value={this.props.title}/>
+                                     value={this.props.title}/>
                                      </Form.Group>
 
                                      <Form.Group controlId="rate">

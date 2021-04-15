@@ -1,8 +1,13 @@
 import react from 'react';
+import { Link } from 'react-router-dom';
 import Footer from '../../Landing-Page/Footer';
 import './Payment.scss';
  <link href="pricing.css" rel="stylesheet"></link>; 
 export default function Payment() {
+    
+       
+    
+    
     return (
         <div id='Payment'>
             <div className="container py-3">
@@ -36,9 +41,11 @@ export default function Payment() {
                                         <li>Email support</li>
                                         <li>High Video Quality(720)</li>
                                     </ul>
+                                    
                                     <button type="button" className="w-100 btn btn-lg btn-outline-danger">
                                     Get Started
                                     </button>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -59,9 +66,11 @@ export default function Payment() {
                                         <li>Priority email support</li>
                                         <li>High Video Quality(1080)</li>
                                     </ul>
-                                    <button type="button" className="w-100 btn btn-lg btn-outline-danger ">
+                                    
+                                    <button onClick={ () => {window.location.href = "http://0374c8ef061a.ngrok.io/"}} type="button" className="w-100 btn btn-lg btn-outline-danger ">
                                     Get Started
                                     </button>
+                                   
                                 </div>
                             </div>
                         </div>

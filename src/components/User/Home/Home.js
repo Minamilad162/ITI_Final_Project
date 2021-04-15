@@ -42,6 +42,14 @@ export default function Home() {
 
         return pointer;
     }
+    
+//    const addtolist = (e) =>{
+//         API.post('mylist/movies/',JSON.stringify({description:e.target.description,release_date:e.target.release_date,title:
+//         e.target.title,thumbnail_url:e.target.thumbnail_url,rate:e.target.rate, video:e.target.video_url,language:e.target.language,
+        
+//         }));
+
+//     } 
 
     const breakPoints = [
         { width: 1, itemsToShow: 1 },
@@ -148,6 +156,7 @@ export default function Home() {
                         <div
                         onClick={() => {window.localStorage.setItem("video",item.video_url);window.localStorage.setItem("poster",item.thumbnail_url)}}>
                         <Link to="/VideoPlayer"><Card  image_url={item.thumbnail_url} Descrip={item.description} /></Link>
+                        {/* <i onClick={addtolist} class="far fa-heart m-2"></i> */}
                          </div>
                     ))}
                 </Carousel>
@@ -164,6 +173,7 @@ function Card({ image_url, Descrip }) {
         <div style={{ width: '18rem' }}>
             <img src={image_url} class="card-img-top" alt="..." />
             <span className={'card-desc'}>{Descrip}</span>
+           
         </div>
     );
 }

@@ -15,7 +15,8 @@ import Movies from './components/User/MoviesList/Movies';
 import VideoApp from './components/User/VideoPlayer/VideoApp';
 import Series from './components/User/Series/Series';
 import Seasons from "./components/User/Seasons/Seasons";
-import Episodes from "./components/User/Episodes/Episodes"
+import Episodes from "./components/User/Episodes/Episodes";
+import EditProfile from "./components/User/EditProfile/EditProfile"
 import App3 from "./App3";
 
 
@@ -35,7 +36,7 @@ function App() {
     else if (!logged)
         return (
             <Router>
-                <Nav />
+                <Nav/>
                 <Switch>
                     <Route exact path="/">
                         <LandingPage />
@@ -43,14 +44,14 @@ function App() {
                     <Route path="/login">
                         <Login header={'Log In..'} endpoint={'logme'} />
                     </Route>
+                    <Route path="/Payment">
+                        <Payment/>
+                    </Route>
                     <Route path="/register">
                         <Register />
                     </Route>
-
-                  
-                    <Redirect to="/login"/>
-
-
+                
+                    <Redirect to="/Payment"/>
 
                 </Switch>
 
@@ -72,6 +73,9 @@ function App() {
                         <Login header={'Please Sign In..'} endpoint={'/logme'} />
                     </Route>
 
+                    <Route path="/EditProfile">
+                        <EditProfile/>
+                    </Route>
 
                     <Route path="/movies">
                         <Movies />
@@ -91,6 +95,9 @@ function App() {
                     <Route path="/Seasons">
                         <Seasons/>
                     </Route>
+                   
+
+                   
                     <Route path="/Episodes/:id">
                         <Episodes/>
                     </Route>

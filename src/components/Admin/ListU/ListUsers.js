@@ -14,7 +14,7 @@ class ListUsers extends React.Component{
     }
     refreshList(){
 
-        fetch('http://hazemmansour.pythonanywhere.com/api/users',
+        fetch('http://hazemmansour.pythonanywhere.com/api/regularusers',
         {method:"GET",
         ContentType:"application/json"})
         .then(response => response.json())
@@ -60,14 +60,9 @@ class ListUsers extends React.Component{
                   <tr>
                   <th>Id</th>
                   <th>Email</th>
-                  <th>User type</th>
-                  <th>CCV</th>
-                  <th>Card num</th>
-                  <th>Exp date</th>
-                  <th>Start date</th>
-                  <th>End date</th>
-                  <th>User</th>
-                  <th>Option</th>
+                  <th>username</th>
+
+
                   </tr>
               </thead>
               <tbody>
@@ -75,13 +70,10 @@ class ListUsers extends React.Component{
                   <tr Key ={user.id}>
                   <td>{user.id}</td>
                   <td>{user.email}</td>
-                  <td>{user.user_type}</td>
-                  <td>{user.ccv}</td>
-                  <td>{user.card_num}</td>
-                  <td>{user.exp_date}</td>
-                  <td>{user.start_date}</td>
-                  <td>{user.end_date}</td>
-                  <td>{user.user}</td>
+                  <td>{user.username}</td>
+
+
+                  
 
                   <td>
                       <ButtonToolbar>
@@ -90,7 +82,6 @@ class ListUsers extends React.Component{
                               style = {{width :"110px",borderRadius:"30px"}} >
                                   Delete User
                           </Button>
-
                       </ButtonToolbar>
                   </td>
                   </tr>

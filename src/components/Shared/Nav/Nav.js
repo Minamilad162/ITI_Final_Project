@@ -64,13 +64,13 @@ export default function Nav() {
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                         <li>
-                                            <Link class="dropdown-item" to="/Payment">
+                                            <Link class="dropdown-item" to="/EditProfile">
                                                 Edit Profile
                                             </Link>
                                         </li>
                                        
                                         <li>
-                                            <a class="dropdown-item" onClick={logout} href='#'>
+                                            <a class="dropdown-item" onClick={logout} href='/'>
                                                 Logout
                                             </a>
                                         </li>

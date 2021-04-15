@@ -49,7 +49,7 @@ const API = {
             return response;
         } catch (err) {
             console.log(err.response.data);
-            alert(err.response.data);
+            // alert(err.response.data);
         }
     },
 

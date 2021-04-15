@@ -1,0 +1,21 @@
+#Edit{
+    background-image: url('../../Assets/bg.jpg');
+    background-blend-mode: hard-light;
+    height: 92vh;
+
+    .input{
+        width: 20vw;
+    }
+
+    .login-card {
+        margin-top: 15vh;
+        background-color: rgba(0,0,0, 0.6);
+        padding: 3rem;
+        border-radius: 30px;
+        box-shadow: 3px 3px rgba(247, 54, 54, 0.2);
+    }
+    .label{
+        color: white;
+    }
+    
+}

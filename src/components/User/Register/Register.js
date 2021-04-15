@@ -22,7 +22,8 @@ class Register extends Component {
         e.preventDefault();
         try {
             const response = await API.post('register/', JSON.stringify(this.state));   
-            window.location.replace('/Register2');
+            window.localStorage.setItem("userid",response.id)
+            window.location.replace('/Payment');
         } catch(err) {
             alert('Something went wrong');
         }
