@@ -109,7 +109,7 @@ export default function Series() {
 
 function Card({ image_url, desc }) {
     return (
-        <div style={{ width: '18rem' }} className={'m-1 mb-4'}>
+        <div style={{ width: '18rem' }} className={'m-4 mb-5'}>
 
             <div className="card bg-dark" style={{width: '18rem'}}>
                 <img src={image_url} className="card-img-top" alt="..." />

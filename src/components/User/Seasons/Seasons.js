@@ -48,8 +48,8 @@ export default function Seasons() {
     else
         return (
             <div id="Seasons">
-                <div id="carouselExampleIndicators" className="carousel slide carousel-fade  " data-bs-ride="carousel">
-                    <div className="carousel-indicators">
+                {/* <div id="carouselExampleIndicators" className="carousel slide carousel-fade  " data-bs-ride="carousel"> */}
+                    {/* <div className="carousel-indicators">
                         {data.map((item, index) => {
                             return index === 0 ? (
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -57,9 +57,9 @@ export default function Seasons() {
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={index} aria-label={`Slide ${index + 1}`}></button>
                             );
                         })}
-                    </div>
-                    <div className="carousel-inner">
-                        {data.map((item, index) => {
+                    </div> */}
+                    {/* <div className="carousel-inner"> */}
+                        {/* {data.map((item, index) => {
                             console.log(data);
                             return index === 0 ? (
 
@@ -71,19 +71,19 @@ export default function Seasons() {
                                     <img src={item.thumbnail_url} className="d-block w-100 carousel-img img-fluid" alt="..." />
                                 </div>
                             );
-                        })}
-                    </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        })} */}
+                    {/* </div> */}
+                    {/* <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span className="visually-hidden">Previous</span>
                     </button>
                     <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
                         <span className="visually-hidden">Next</span>
-                    </button>
-                </div>
+                    </button> */}
+                {/* </div> */}
                 <div>
-                    <h4 className="title">Episodes</h4>
+                    <h4 className="title">Seasons</h4>
                 </div>
                 <div className="SeriesContainer d-flex flex-wrap ">
                     {data.map((item, index) => (
@@ -103,9 +103,12 @@ export default function Seasons() {
 
 function Card({ image_url, title }) {
     return (
-        <div style={{ width: '18rem' }}>
+        <div  className="card bg-dark " style={{ width: '18rem' }} className={'m-4 mb-5'}>
             <img src={image_url} class="card-img-top" alt="..." />
-            <span>{title}</span>
+            <div className="card-body">
+            <p className="card-text">{title}</p>
+
+            </div>  
         </div>
     );
 }

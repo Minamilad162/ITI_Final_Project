@@ -64,7 +64,7 @@ class EditSeries extends React.Component{
                              <Form onSubmit={this.handelSubmit}>
 
                              <Form.Group controlId="id">
-                                     <Form.Label>Sires id</Form.Label>
+                                     <Form.Label>Series id</Form.Label>
                                      <Form.Control type="text" name="id"  placeholder="id" required
                                      disabled
                                      value={this.props.mykey}/>

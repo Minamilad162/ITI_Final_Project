@@ -47,9 +47,7 @@ function App() {
                         <Register />
                     </Route>
 
-                    {/* <Route path="/admin/login">
-                        <Login header={'Admin Login'} endpoint={'admin/login'} />
-                    </Route> */}
+                  
                     <Redirect to="/login"/>
 
 

@@ -74,62 +74,62 @@ class EditMovies extends React.Component{
                                      <Form.Label>MovieId</Form.Label>
                                      <Form.Control type="text" name="id"  placeholder="id" required
                                      disabled
-                                     value={this.props.mykey}/>
+                                    required value={this.props.mykey}/>
                                    
                                      </Form.Group>
 
                                      <Form.Group controlId="description">
                                      <Form.Label>Description</Form.Label>
                                      <Form.Control type="text" name="description" placeholder="description"
-                                     required value={this.props.description}/>
+                                    required value={this.props.description}/>
                                      </Form.Group>
 
                                      <Form.Group controlId="release_date">
                                      <Form.Label>Release date</Form.Label>
                                      <Form.Control type="date" name="release_date"  placeholder="release_date"
-                                       required value={this.props.release_date}/> 
+                                    required value={this.props.release_date}/> 
                                      </Form.Group>
 
                                  <Form.Group controlId="title">
                                      <Form.Label>Title</Form.Label>
                                      <Form.Control type="text" name="title"  placeholder="Movietitle" 
-                                     required value={this.props.title}/>
+                                    required value={this.props.title}/>
                                      </Form.Group>
 
                                      <Form.Group controlId="rate">
                                      <Form.Label>Rate</Form.Label>
                                      <Form.Control type="text" name="rate"  placeholder="rate" 
-                                     required defaultValue={this.props.rate}/>
+                                      defaultValue={this.props.rate}/>
                                      </Form.Group>
 
                                     <Form.Group controlId="language">
                                     <Form.Label>Language</Form.Label>
                                     <Form.Control type="text" name="language"  placeholder="language" 
-                                    required value={this.props.language}/>
+                                     value={this.props.language}/>
                                     </Form.Group>
 
                                     <Form.Group controlId="thumbnail_url">
                                     <Form.Label>Thumbil url</Form.Label>
                                     <Form.Control type="text" name="thumbnail_url"  placeholder="thumbnail_url" 
-                                    required value={this.props.thumbnail_ur}/>
+                                     value={this.props.thumbnail_ur}/>
                                     </Form.Group>
 
                                     <Form.Group controlId="categories">
                                     <Form.Label>Catgory</Form.Label>
                                     <Form.Control type="text" name="categories"  placeholder="categories" 
-                                   required value={this.props.categories}/>
+                                    value={this.props.categories}/>
                                     </Form.Group>
 
                                     <Form.Group controlId="video_url">
                                     <Form.Label>Video url</Form.Label>
                                     <Form.Control type="text" name="video_url"  placeholder="video_url" 
-                                    required value={this.props.video_url}/>
+                                     value={this.props.video_url}/>
                                     </Form.Group>
 
                                     <Form.Group controlId="duration">
                                     <Form.Label>Duration</Form.Label>
                                     <Form.Control type="text" name="duration"  placeholder="duration" 
-                                    required  value={this.props.duration}/>
+                                     value={this.props.duration}/>
                                     </Form.Group>
 
                                  <Form.Group>
