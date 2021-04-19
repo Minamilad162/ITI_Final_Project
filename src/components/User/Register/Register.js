@@ -23,7 +23,7 @@ class Register extends Component {
         try {
             const response = await API.post('register/', JSON.stringify(this.state));   
             window.localStorage.setItem("userid",response.id)
-            window.location.replace('/Payment');
+            window.location.replace('/login');
         } catch(err) {
             alert('Something went wrong');
         }

@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import  './Navbar.css';
+import  './Navbar.scss';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import {SidebarData} from './SideBar';
 import { IconContext } from 'react-icons/lib';
@@ -14,7 +14,7 @@ function Navbar(){
         const showSidebar = () => setSidebar(!sidebar);
         return(
 
-            <div>   
+            <div id="AdminNavbar">   
          <IconContext.Provider value={{color:'#fff'}} > 
           <div className="navbar">
               <Link to="#" className="menu-bars" onClick={showSidebar}>

@@ -32,15 +32,19 @@ class App3 extends React.Component {
                             <Route path="/ListMovies" exact>
                                 <ListMovies />
                             </Route>
+
                             <Route path="/ListSerieses" exact>
                                 <ListSerieses />
                             </Route>
+
                             <Route path="/ListSeasons" exact>
                                 <ListSeasons />
                             </Route>
+
                             <Route path="/ListEpisodes" exact>
                                 <ListEpisodes />
                             </Route>
+                            
                             <Route path="/ListCategories" exact>
                                 <ListCategories />
                             </Route>
