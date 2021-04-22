@@ -67,11 +67,11 @@ export default function Login({ header, endpoint }) {
                                 Log in
                             </button>
 
-                            <div>
+                            {/* <div>
                             <h1 className="title text">
                                 <App2/>
                                 </h1>
-                            </div>
+                            </div> */}
                             
 
                         </form>

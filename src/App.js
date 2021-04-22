@@ -9,7 +9,6 @@ import Loader from './components/Shared/Loader/Loader';
 import Nav from './components/Shared/Nav/Nav';
 import Home from './components/User/Home/Home';
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
-import Dashboard from './components/AdminNavbar/AdminNavbar';
 import LandingPage from './components/Landing-Page/LandingPage';
 import Movies from './components/User/MoviesList/Movies';
 import VideoApp from './components/User/VideoPlayer/VideoApp';
@@ -95,9 +94,7 @@ function App() {
                     <Route path="/Seasons">
                         <Seasons/>
                     </Route>
-                   
-
-                   
+                     
                     <Route path="/Episodes/:id">
                         <Episodes/>
                     </Route>
