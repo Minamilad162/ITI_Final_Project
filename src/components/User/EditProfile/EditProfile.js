@@ -26,7 +26,7 @@ class EditProfile extends Component {
     async handleSubmit(e) {
         e.preventDefault();
         try {
-            const response = await API.update(`editprofile/`, window.localStorage.getItem('userid'), JSON.stringify(this.state));
+            await API.update(`editprofile/`, window.localStorage.getItem('userid'), JSON.stringify(this.state));
             window.location.replace('/');
         } catch (err) {
             alert('Something went wrong');
@@ -45,12 +45,12 @@ class EditProfile extends Component {
                         <form className="form " onSubmit={this.handleSubmit}>
                             <div class="mb-3">
                                 <label className="form-label text label">Email</label>
-                                <input className="input" name="email" onChange={this.handleChange} placeholder="Email" className="form-control input" />
+                                <input className="input form-control input" name="email" onChange={this.handleChange} placeholder="Email" />
                             </div>
 
                             <div class="mb-3">
                                 <label className="form-label text label">username</label>
-                                <input className="input" name="username" onChange={this.handleChange} placeholder="username" className="form-control input" />
+                                <input className="input form-control input" name="username" onChange={this.handleChange} placeholder="username" />
                             </div>
 
                             <div className="mb-3">

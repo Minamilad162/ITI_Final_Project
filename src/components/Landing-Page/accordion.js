@@ -1,4 +1,3 @@
-import react from 'react';
 import './cover.css';
 
 export default function Accordion() {

@@ -54,7 +54,7 @@ export default function Nav() {
                                 </li>
                               
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Settings
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

@@ -21,7 +21,7 @@ const API = {
     },
 
     post: async (path, data) => {
-        const token = localStorage.getItem('token');
+        localStorage.getItem('token');
         const authAxios = axios.create({
             headers: {
                 Accept: 'application/json',
@@ -54,8 +54,5 @@ const API = {
     },
 
     delete: async () => {},
-
-    //
 };
-
 export default API;

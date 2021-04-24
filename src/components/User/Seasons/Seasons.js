@@ -19,7 +19,7 @@ export default function Seasons() {
             });
             setData(obj);
         });
-    }, []);
+    }, [id]);
 
    
     if (data[1].length === 0) return <Loader />;
@@ -46,7 +46,7 @@ export default function Seasons() {
 
 function Card({ image_url, title }) {
     return (
-        <div className="card bg-dark " style={{ width: '18rem' }} className={'m-4 mb-5'}>
+        <div className="card bg-dark m-4 mb-5 " style={{ width: '18rem' }} >
             <img src={image_url} class="card-img-top" alt="..." />
             <div className="card-body">
                 <p className="card-text">{title}</p>

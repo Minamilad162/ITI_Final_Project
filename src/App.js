@@ -1,14 +1,13 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Login from './components/User/Login/Login';
 import Payment from './components/User/Payment/Payment';
 import Register from './components/User/Register/Register';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
-import RegisterAdmin from './components/Admin/Register/Register';
 import Loader from './components/Shared/Loader/Loader';
 import Nav from './components/Shared/Nav/Nav';
 import Home from './components/User/Home/Home';
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import LandingPage from './components/Landing-Page/LandingPage';
 import Movies from './components/User/MoviesList/Movies';
 import VideoApp from './components/User/VideoPlayer/VideoApp';

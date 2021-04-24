@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Carousel, { consts } from 'react-elastic-carousel';
 import { Link, useParams } from 'react-router-dom';
 import './Episodes.scss';
 
@@ -21,24 +20,9 @@ export default function Episodes() {
             console.log(obj);
             setData(obj);
         });
-    }, []);
+    }, [id]);
 
-    function myArrow({ type, onClick, isEdge }) {
-        const pointer =
-            type === consts.PREV ? (
-                <button className="carousel-control-prev" type="button" onClick={onClick} disabled={isEdge}>
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-            ) : (
-                <button className="carousel-control-next" type="button" onClick={onClick} disabled={isEdge}>
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                </button>
-            );
-
-        return pointer;
-    }
+    
 
     if (data[1].length === 0) return <Loader />;
     else
@@ -71,7 +55,7 @@ export default function Episodes() {
 
 function Card({ image_url, title }) {
     return (
-        <div className="card bg-dark" style={{ width: '18rem' }} className={'m-5'}>
+        <div className="card bg-dark m-5" style={{ width: '18rem' }} >
             <img src={image_url} class="card-img-top" alt="..." />
             <div className="card-body">
                 <p className="card-text">{title}</p>

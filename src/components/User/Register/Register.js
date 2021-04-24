@@ -41,12 +41,12 @@ class Register extends Component {
                         <form className="form " onSubmit={this.handleSubmit}>
                             <div class="mb-3">
                                 <label className="form-label text label">Email</label>
-                                <input className="input" name="email" onChange={this.handleChange} placeholder="Email" className="form-control input" />
+                                <input className="input form-control input" name="email" onChange={this.handleChange} placeholder="Email"  />
                             </div>
 
                             <div class="mb-3">
                                 <label className="form-label text label">username</label>
-                                <input className="input" name="username" onChange={this.handleChange} placeholder="username" className="form-control input" />
+                                <input className="input form-control input" name="username" onChange={this.handleChange} placeholder="username" />
                             </div>
 
                             <div className="mb-3">
