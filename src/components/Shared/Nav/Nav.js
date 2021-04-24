@@ -1,13 +1,12 @@
-import react from 'react';
-import {Link} from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
 import './Nav.scss';
 
 export default function Nav() {
-
     const logout = () => {
         localStorage.removeItem('token');
         window.location.reload();
-    }
+    };
 
     const token = localStorage.getItem('token');
     let logged;
@@ -53,11 +52,7 @@ export default function Nav() {
                                         Series
                                     </Link>
                                 </li>
-                                {/* <li class="nav-item">
-                                    <Link class="nav-link active" aria-current="page" to="/contact-us">
-                                        Contact Us
-                                    </Link>
-                                </li> */}
+                              
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Settings
@@ -68,9 +63,9 @@ export default function Nav() {
                                                 Edit Profile
                                             </Link>
                                         </li>
-                                       
+
                                         <li>
-                                            <a class="dropdown-item" onClick={logout} href='/'>
+                                            <a class="dropdown-item" onClick={logout} href="/">
                                                 Logout
                                             </a>
                                         </li>

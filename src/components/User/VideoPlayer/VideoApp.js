@@ -1,44 +1,44 @@
 // export default VideoPlayer;
 import React, { Component } from 'react';
 import VideoPlayer from 'react-video-js-player';
-import "./VideoPlayer.scss";
+import './VideoPlayer.scss';
 
 class VideoApp extends Component {
-    player = {}
+    player = {};
     state = {
         video: {
-            src: window.localStorage.getItem("video"),
-            poster: window.localStorage.getItem("poster")
-        }
-    }
+            src: window.localStorage.getItem('video'),
+            poster: window.localStorage.getItem('poster'),
+        },
+    };
 
-    onPlayerReady(player){
-        console.log("Player is ready: ", player);
+    onPlayerReady(player) {
+        console.log('Player is ready: ', player);
         this.player = player;
     }
 
-    onVideoPlay(duration){
-        console.log("Video played at: ", duration);
+    onVideoPlay(duration) {
+        console.log('Video played at: ', duration);
     }
 
-    onVideoPause(duration){
-        console.log("Video paused at: ", duration);
+    onVideoPause(duration) {
+        console.log('Video paused at: ', duration);
     }
 
-    onVideoTimeUpdate(duration){
-        console.log("Time updated: ", duration);
+    onVideoTimeUpdate(duration) {
+        console.log('Time updated: ', duration);
     }
 
-    onVideoSeeking(duration){
-        console.log("Video seeking: ", duration);
+    onVideoSeeking(duration) {
+        console.log('Video seeking: ', duration);
     }
 
-    onVideoSeeked(from, to){
+    onVideoSeeked(from, to) {
         console.log(`Video seeked from ${from} to ${to}`);
     }
 
-    onVideoEnd(){
-        console.log("Video ended");
+    onVideoEnd() {
+        console.log('Video ended');
     }
 
     render() {

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import  { consts } from 'react-elastic-carousel';
-import { BrowserRouter as  Link, } from 'react-router-dom';
+import {useHistory } from 'react-router-dom';
 import "./Series.scss";
 
 import API from '../../../API';
@@ -8,6 +7,9 @@ import Loader from '../../Shared/Loader/Loader';
 import Footer from "../../Landing-Page/Footer";
 
 export default function Series() {
+
+    const history = useHistory()
+
     const [data, setData] = useState({1:[]});
 
     useEffect(() => {
@@ -23,31 +25,8 @@ export default function Series() {
     }, []);
 
 
-    function myArrow({ type, onClick, isEdge }) {
-        const pointer =
-            type === consts.PREV ? (
-                <button className="carousel-control-prev" type="button" onClick={onClick} disabled={isEdge}>
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-            ) : (
-                <button className="carousel-control-next" type="button" onClick={onClick} disabled={isEdge}>
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                </button>
-            );
 
-        return pointer;
-    }
-
-    const breakPoints = [
-        { width: 1, itemsToShow: 1 },
-        { width: 550, itemsToShow: 2, itemsToScroll: 2, pagination: false },
-        { width: 850, itemsToShow: 3 },
-        { width: 1150, itemsToShow: 4, itemsToScroll: 2 },
-        { width: 1450, itemsToShow: 5 },
-        { width: 1750, itemsToShow: 6 },
-    ];
+    
 
     if (data[1].length === 0) return <Loader />;
     else
@@ -93,9 +72,12 @@ export default function Series() {
                 </div>
                 <div className="SeriesContainer d-flex flex-wrap ">
                     {data.map((item, index) => (
-                        <Link to={`/series/${item.id}`}>
+                        
+                            <div onClick={ () => history.push(`/series/${item.id}`)}>
                             <Card image_url={item.thumbnail_url} desc={item.description}/>
-                        </Link>
+                            </div>
+
+                        
                     ))}
                 </div>
 

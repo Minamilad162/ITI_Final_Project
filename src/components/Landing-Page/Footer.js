@@ -1,15 +1,10 @@
-import react from 'react';
 import './cover.css';
-import { a } from 'react-router-dom';
 
 export default function Footer() {
     return (
         <div>
-           
             <footer className=" text-white pt-8 my-md-8  border-top ">
-                <h1 className='footer'>
-                    Contact Us
-                </h1>
+                <h1 className="footer">Contact Us</h1>
                 <div className="container ">
                     <section className="mb-4">
                         {/* <!-- Facebook --> */}
@@ -43,11 +38,9 @@ export default function Footer() {
                         </a>
                     </section>
 
-    
-
                     <section className="mb-4">
                         <p>
-                           CinemaFy is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices. You
+                            CinemaFy is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices. You
                             can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and
                             movies are added every week!.
                         </p>
@@ -65,7 +58,3 @@ export default function Footer() {
         </div>
     );
 }
-
-
-
-

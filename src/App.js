@@ -13,11 +13,10 @@ import LandingPage from './components/Landing-Page/LandingPage';
 import Movies from './components/User/MoviesList/Movies';
 import VideoApp from './components/User/VideoPlayer/VideoApp';
 import Series from './components/User/Series/Series';
-import Seasons from "./components/User/Seasons/Seasons";
-import Episodes from "./components/User/Episodes/Episodes";
-import EditProfile from "./components/User/EditProfile/EditProfile"
-import App3 from "./App3";
-
+import Seasons from './components/User/Seasons/Seasons';
+import Episodes from './components/User/Episodes/Episodes';
+import EditProfile from './components/User/EditProfile/EditProfile';
+import App3 from './App3';
 
 function App() {
     const [loaded, setLoaded] = useState(false);
@@ -31,11 +30,11 @@ function App() {
         }, 1000);
     }, []);
 
-    if (!loaded) return <Loader/>;
+    if (!loaded) return <Loader />;
     else if (!logged)
         return (
             <Router>
-                <Nav/>
+                <Nav />
                 <Switch>
                     <Route exact path="/">
                         <LandingPage />
@@ -44,17 +43,18 @@ function App() {
                         <Login header={'Log In..'} endpoint={'logme'} />
                     </Route>
                     <Route path="/Payment">
-                        <Payment/>
+                        <Payment />
                     </Route>
                     <Route path="/register">
                         <Register />
                     </Route>
-                
-                    <Redirect to="/login"/>
 
+                    <Redirect to="/login" />
                 </Switch>
 
-                <a className="position-fixed bottom-0 end-0 btn btn-light" href="#nav">Top</a>
+                <a className="position-fixed bottom-0 end-0 btn btn-light" href="#nav">
+                    Top
+                </a>
             </Router>
         );
     else
@@ -73,34 +73,36 @@ function App() {
                     </Route>
 
                     <Route path="/EditProfile">
-                        <EditProfile/>
+                        <EditProfile />
                     </Route>
 
                     <Route path="/movies">
                         <Movies />
                     </Route>
                     <Route exact path="/series">
-                        <Series/>
+                        <Series />
                     </Route>
                     <Route path="/series/:id">
                         <Seasons />
                     </Route>
                     <Route path="/Dashboard">
-                        <App3/>
+                        <App3 />
                     </Route>
                     <Route path="/VideoPlayer">
-                        <VideoApp/>
+                        <VideoApp />
                     </Route>
                     <Route path="/Seasons">
-                        <Seasons/>
+                        <Seasons />
                     </Route>
-                     
+
                     <Route path="/Episodes/:id">
-                        <Episodes/>
+                        <Episodes />
                     </Route>
-                    <Route path="/contact-us"/>
+                    <Route path="/contact-us" />
                 </Switch>
-                <a className="position-fixed bottom-0 end-0 btn btn-light" href="#nav">Top</a>
+                <a className="position-fixed bottom-0 end-0 btn btn-light" href="#nav">
+                    Top
+                </a>
             </Router>
         );
 }

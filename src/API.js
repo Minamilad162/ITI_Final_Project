@@ -56,7 +56,6 @@ const API = {
     delete: async () => {},
 
     //
-    
 };
 
 export default API;

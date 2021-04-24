@@ -1,30 +1,22 @@
-import react from 'react';
-import { Link } from 'react-router-dom';
+
 import Footer from '../../Landing-Page/Footer';
 import './Payment.scss';
- <link href="pricing.css" rel="stylesheet"></link>; 
+<link href="pricing.css" rel="stylesheet"></link>;
 export default function Payment() {
-    
-       
-    
-    
     return (
-        <div id='Payment'>
+        <div id="Payment">
             <div className="container py-3">
-                {/* <header className="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-                   
-                </header> */}
+                
 
                 <div className="pricing-header p-3 pb-md-4 mx-auto text-center">
                     <h1 className="display-4 fw-normal Text ">Plans</h1>
                     <p className="fs-5 Text ">
-                    We offer a variety of plans to meet your needs. The plan you choose will determine the number of devices that you can watch Our Website on, at the same time.
-                    With all of our plans, you can download our Website app on all your favorite devices and watch unlimited movies and TV shows.                    
+                        We offer a variety of plans to meet your needs. The plan you choose will determine the number of devices that you can watch Our Website on, at the same time. With all of our
+                        plans, you can download our Website app on all your favorite devices and watch unlimited movies and TV shows.
                     </p>
                 </div>
 
                 <main>
-                    
                     <div className="row row-cols-1 row-cols-md-3 mb-3 text-center">
                         <div className="col">
                             <div className="card mb-4 rounded-3 shadow-sm border-dark">
@@ -41,16 +33,14 @@ export default function Payment() {
                                         <li>Email support</li>
                                         <li>High Video Quality(720)</li>
                                     </ul>
-                                    
+
                                     <button type="button" className="w-100 btn btn-lg btn-outline-danger">
-                                    Get Started
+                                        Get Started
                                     </button>
-                                    
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
                         <div className="col">
                             <div className="card mb-4 rounded-3 shadow-sm border-dark">
                                 <div className="card-header py-3 bg-danger">
@@ -66,11 +56,16 @@ export default function Payment() {
                                         <li>Priority email support</li>
                                         <li>High Video Quality(1080)</li>
                                     </ul>
-                                    
-                                    <button onClick={ () => {window.location.href = "http://0374c8ef061a.ngrok.io/"}} type="button" className="w-100 btn btn-lg btn-outline-danger ">
-                                    Get Started
+
+                                    <button
+                                        onClick={() => {
+                                            window.location.href = 'http://0374c8ef061a.ngrok.io/';
+                                        }}
+                                        type="button"
+                                        className="w-100 btn btn-lg btn-outline-danger "
+                                    >
+                                        Get Started
                                     </button>
-                                   
                                 </div>
                             </div>
                         </div>
@@ -103,10 +98,16 @@ export default function Payment() {
                         <table className="table text-center">
                             <thead>
                                 <tr>
-                                    <th className='Text' style={{width: '34%'}}></th>
-                                    <th className='Text' style={{width: '22%'}}>Basic</th>
-                                    <th className='Text' style={{width: '22%'}}>Standard</th>
-                                    <th className='Text' style={{width: '22%'}}>Premium</th>
+                                    <th className="Text" style={{ width: '34%' }}></th>
+                                    <th className="Text" style={{ width: '22%' }}>
+                                        Basic
+                                    </th>
+                                    <th className="Text" style={{ width: '22%' }}>
+                                        Standard
+                                    </th>
+                                    <th className="Text" style={{ width: '22%' }}>
+                                        Premium
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -115,13 +116,13 @@ export default function Payment() {
                                         Public
                                     </th>
                                     <td>
-                                    <i class="fas fa-check-circle Text"></i>
+                                        <i class="fas fa-check-circle Text"></i>
                                     </td>
                                     <td>
-                                    <i class="fas fa-check-circle Text"></i>
+                                        <i class="fas fa-check-circle Text"></i>
                                     </td>
                                     <td>
-                                    <i class="fas fa-check-circle Text"></i>
+                                        <i class="fas fa-check-circle Text"></i>
                                     </td>
                                 </tr>
                                 <tr>
@@ -130,10 +131,10 @@ export default function Payment() {
                                     </th>
                                     <td></td>
                                     <td>
-                                    <i class="fas fa-check-circle Text"></i>
+                                        <i class="fas fa-check-circle Text"></i>
                                     </td>
                                     <td>
-                                    <i class="fas fa-check-circle Text"></i>
+                                        <i class="fas fa-check-circle Text"></i>
                                     </td>
                                 </tr>
                             </tbody>
@@ -144,13 +145,13 @@ export default function Payment() {
                                         Permissions
                                     </th>
                                     <td>
-                                    <i class="fas fa-check-circle Text"></i>
+                                        <i class="fas fa-check-circle Text"></i>
                                     </td>
                                     <td>
-                                    <i class="fas fa-check-circle Text"></i>
+                                        <i class="fas fa-check-circle Text"></i>
                                     </td>
                                     <td>
-                                    <i class="fas fa-check-circle Text"></i>
+                                        <i class="fas fa-check-circle Text"></i>
                                     </td>
                                 </tr>
                                 <tr>
@@ -159,10 +160,10 @@ export default function Payment() {
                                     </th>
                                     <td></td>
                                     <td>
-                                    <i class="fas fa-check-circle Text"></i>
+                                        <i class="fas fa-check-circle Text"></i>
                                     </td>
                                     <td>
-                                    <i class="fas fa-check-circle Text"></i>
+                                        <i class="fas fa-check-circle Text"></i>
                                     </td>
                                 </tr>
                                 <tr>
@@ -171,10 +172,10 @@ export default function Payment() {
                                     </th>
                                     <td></td>
                                     <td>
-                                    <i class="fas fa-check-circle Text"></i>
+                                        <i class="fas fa-check-circle Text"></i>
                                     </td>
                                     <td>
-                                    <i class="fas fa-check-circle Text"></i>
+                                        <i class="fas fa-check-circle Text"></i>
                                     </td>
                                 </tr>
                                 <tr>
@@ -192,9 +193,9 @@ export default function Payment() {
                     </div>
                 </main>
 
-                <div className='text-center footer'>
-                            <Footer/>
-                        </div>
+                <div className="text-center footer">
+                    <Footer />
+                </div>
             </div>
         </div>
     );

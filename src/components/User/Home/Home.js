@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Carousel, { consts } from 'react-elastic-carousel';
 import { Link } from 'react-router-dom';
 import './Home.scss';
-import footer from '../../Landing-Page/Footer';
-
 import API from '../../../API';
 import Loader from '../../Shared/Loader/Loader';
 import Footer from '../../Landing-Page/Footer';
@@ -41,14 +39,6 @@ export default function Home() {
 
         return pointer;
     }
-
-    //    const addtolist = (e) =>{
-    //         API.post('mylist/movies/',JSON.stringify({description:e.target.description,release_date:e.target.release_date,title:
-    //         e.target.title,thumbnail_url:e.target.thumbnail_url,rate:e.target.rate, video:e.target.video_url,language:e.target.language,
-
-    //         }));
-
-    //     }
 
     const breakPoints = [
         { width: 1, itemsToShow: 1 },
@@ -199,7 +189,6 @@ export default function Home() {
                             <Link to="/VideoPlayer">
                                 <Card image_url={item.thumbnail_url} Descrip={item.description} />
                             </Link>
-                            {/* <i onClick={addtolist} class="far fa-heart m-2"></i> */}
                         </div>
                     ))}
                 </Carousel>

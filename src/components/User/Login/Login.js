@@ -1,12 +1,7 @@
-import React, { useState, useEffect } from "react";
-import "./login.scss";
-import API from "../../../API";
-import Nav from '../../Shared/Nav/Nav';
-import { useHistory } from "react-router";
-import Footer from "../../Landing-Page/Footer";
-import App2 from "../../../App2";
-
-
+import React, { useState } from 'react';
+import './login.scss';
+import API from '../../../API';
+import Footer from '../../Landing-Page/Footer';
 
 export default function Login({ header, endpoint }) {
     const [data, setData] = useState({});
@@ -23,7 +18,7 @@ export default function Login({ header, endpoint }) {
         e.preventDefault();
         console.log(JSON.stringify(data));
         const response = await API.post(endpoint, JSON.stringify(data));
-        localStorage.setItem("token", response.token);
+        localStorage.setItem('token', response.token);
         window.location.replace('/');
     };
     return (
@@ -37,49 +32,24 @@ export default function Login({ header, endpoint }) {
 
                         <form className="form p-3" onSubmit={handleSubmit}>
                             <div class="mb-3">
-                                <label className="form-label text">
-                                  Username
-                                </label>
-                                <input
-                                    name="username"
-                                    placeholder="Username"
-                                    className="form-control input"
-                                    onChange={handleChange}
-                                ></input>
+                                <label className="form-label text">Username</label>
+                                <input name="username" placeholder="Username" className="form-control input" onChange={handleChange}></input>
                             </div>
                             <div className="mb-3">
-                                <label className="form-label text">
-                                    Password
-                                </label>
-                                <input
-                                type='password'
-                                    name="password"
-                                    placeholder="Your Password.."
-                                    className="form-control input"
-                                    onChange={handleChange}
-                                ></input>
+                                <label className="form-label text">Password</label>
+                                <input type="password" name="password" placeholder="Your Password.." className="form-control input" onChange={handleChange}></input>
                             </div>
-                            {/* <span style={{ color: "red" }}> {this.state.error}</span> <br /> */}
-                            <button
-                                type="submit"
-                                className="btn btn-danger mb-3"
-                            >
+                            <button type="submit" className="btn btn-danger mb-3">
                                 Log in
                             </button>
 
-                            {/* <div>
-                            <h1 className="title text">
-                                <App2/>
-                                </h1>
-                            </div> */}
-                            
-
+                        
                         </form>
                     </div>
                 </div>
-                <div className='text-center footer'>
-                            <Footer/>
-                        </div>
+                <div className="text-center footer">
+                    <Footer />
+                </div>
             </div>
         </>
     );

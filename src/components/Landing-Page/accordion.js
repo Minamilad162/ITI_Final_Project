@@ -62,9 +62,10 @@ export default function Accordion() {
                     </h2>
                     <div id="flush-collapseThree" className="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                         <div className="accordion-body bb">
-                            Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Cinemafy account to watch instantly on the web at Cinemafy.com from your personal computer or on
-                            any internet-connected device that offers the Cinemafy app, including smart TVs, smartphones, tablets, streaming media players and game consoles. You can also download your
-                            favorite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Cinemafy with you anywhere.
+                            Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Cinemafy account to watch instantly on the web at Cinemafy.com from your personal computer or
+                            on any internet-connected device that offers the Cinemafy app, including smart TVs, smartphones, tablets, streaming media players and game consoles. You can also download
+                            your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Cinemafy with you
+                            anywhere.
                         </div>
                     </div>
                 </div>
