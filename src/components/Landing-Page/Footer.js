@@ -43,60 +43,6 @@ export default function Footer() {
                         </a>
                     </section>
 
-    <div className="row">
-    <div className="col-12 col-md">
-    {/* <h5>Features</h5> */}
-        <ul className="list-unstyled text-small">
-            <li className="mb-1">
-                <a className="link-secondary text-decoration-none" href="#">
-                    FAQ
-                </a>
-            </li>
-            
-            <li className="mb-1">
-                <a className="link-secondary text-decoration-none" href="https://fast.com/">
-                    Speed Test
-                </a>
-            </li>
-           
-        </ul>
-     
-    </div>
-    <div className="col-8 col-md">
-    {/* <h5>Resources</h5> */}
-        <ul className="list-unstyled text-small">
-            <li className="mb-1">
-                <a className="link-secondary text-decoration-none" href="#">
-                    Help Center
-                </a>
-            </li>
-            <li className="mb-1">
-                <a className="link-secondary text-decoration-none" href="#">
-                    Jobs
-                </a>
-            </li>
-           
-        </ul>
-    </div>
-  
-    <div className="col-6 col-md">
-        {/* <h5>About</h5> */}
-        <ul className="list-unstyled text-small">
-            <li className="mb-1">
-                <a className="link-secondary text-decoration-none" href="#">
-                    Ways to Watch
-                </a>
-            </li>
-         
-            <li className="mb-1">
-                <a className="link-secondary text-decoration-none" href="#">
-                    Contact Us
-                </a>
-            </li>
-            
-        </ul>
-    </div>
-</div>
     
 
                     <section className="mb-4">

@@ -1,0 +1,75 @@
+
+
+
+.cover-container {
+  max-width: 42em;
+}
+
+
+
+
+
+.landing-page {
+  height: 100vh;
+}
+
+.back{
+  background-image: url('../Assets/bg.jpg');
+  background-color: black;
+}
+
+.font{
+  font-size:xx-large;
+}
+
+.button{
+  background-color: red;
+}
+
+
+.button2{
+  background-color: rgb(52, 52, 255);
+}
+
+.margin{
+  margin-top: 20vh;
+}
+
+.bb{
+  background-color:rgb(7, 7, 7);
+  color: white;
+}
+
+.accord{
+  margin-top: 100vh;
+  margin-bottom: 50vh;
+}
+
+  .footer{
+    margin-top: 30vh ;
+  }
+
+.span{
+  font-size: large;
+}
+.Info{
+  margin-bottom: 10vh;
+}
+.accordion-button{
+  color: white;
+  /* background-color: unset; */
+}
+.c{
+  background-color: black;
+}
+.width{
+  width:100vw
+}
+
+.parag{
+  margin-left: 100vh;
+}
+
+.footer{
+  margin-bottom: 5vh;
+}

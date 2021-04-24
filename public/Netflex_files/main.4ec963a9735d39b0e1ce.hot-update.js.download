@@ -1,0 +1,21 @@
+webpackHotUpdate("main",{
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/Shared/Nav/Nav.scss":
+false,
+
+/***/ "./src/components/Shared/Nav/Nav.js":
+/*!******************************************!*\
+  !*** ./src/components/Shared/Nav/Nav.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: D:\\ITI\\Courses\\Final Project\\frontend\\src\\components\\Shared\\Nav\\Nav.js: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (84:36)\n\n\u001b[0m \u001b[90m 82 |\u001b[39m                                         {\u001b[0m\n\u001b[0m \u001b[90m 83 |\u001b[39m                                             logged\u001b[33m?\u001b[39m \u001b[33m<\u001b[39m\u001b[33ma\u001b[39m \u001b[36mclass\u001b[39m\u001b[33m=\u001b[39m\u001b[32m\"dropdown-item\"\u001b[39m href\u001b[33m=\u001b[39m\u001b[32m\"#\"\u001b[39m\u001b[33m>\u001b[39m\u001b[33mLogout\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33ma\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 84 |\u001b[39m                                     \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mli\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 85 |\u001b[39m                                 \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mul\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 86 |\u001b[39m                             \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mli\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 87 |\u001b[39m                         \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mul\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n    at _temp._raise (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:775:17)\n    at _temp.raiseWithData (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:768:17)\n    at _temp.raise (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:736:17)\n    at _temp.jsxParseElementAt (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:5151:18)\n    at _temp.jsxParseElement (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:5161:17)\n    at _temp.parseExprAtom (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:5168:19)\n    at _temp.parseExprSubscripts (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10689:23)\n    at _temp.parseUpdate (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10669:21)\n    at _temp.parseMaybeUnary (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10647:23)\n    at _temp.parseExprOps (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10504:23)");
+
+/***/ }),
+
+/***/ "./src/components/Shared/Nav/Nav.scss":
+false
+
+})
+//# sourceMappingURL=main.4ec963a9735d39b0e1ce.hot-update.js.map

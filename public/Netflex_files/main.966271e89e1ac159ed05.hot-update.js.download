@@ -1,0 +1,21 @@
+webpackHotUpdate("main",{
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/Shared/Nav/Nav.scss":
+false,
+
+/***/ "./src/components/Shared/Nav/Nav.js":
+/*!******************************************!*\
+  !*** ./src/components/Shared/Nav/Nav.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: D:\\ITI\\Courses\\Final Project\\frontend\\src\\components\\Shared\\Nav\\Nav.js: Unexpected token, expected \":\" (87:32)\n\n\u001b[0m \u001b[90m 85 |\u001b[39m                                 \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mul\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 86 |\u001b[39m                             \u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 87 |\u001b[39m                                 }\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 88 |\u001b[39m                             \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mli\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 89 |\u001b[39m                         \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mul\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 90 |\u001b[39m                     \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n    at _temp._raise (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:775:17)\n    at _temp.raiseWithData (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:768:17)\n    at _temp.raise (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:736:17)\n    at _temp.unexpected (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:9716:16)\n    at _temp.expect (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:9702:28)\n    at _temp.parseConditional (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:3066:12)\n    at _temp.parseMaybeConditional (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10484:17)\n    at _temp.parseMaybeAssign (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10441:21)\n    at _temp.parseMaybeAssign (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:3772:20)\n    at _temp.parseExpressionBase (D:\\ITI\\Courses\\Final Project\\frontend\\node_modules\\@babel\\parser\\lib\\index.js:10386:23)");
+
+/***/ }),
+
+/***/ "./src/components/Shared/Nav/Nav.scss":
+false
+
+})
+//# sourceMappingURL=main.966271e89e1ac159ed05.hot-update.js.map
