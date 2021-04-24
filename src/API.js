@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://hazemmansour.pythonanywhere.com/api';
+const BASE_URL = 'https://hazemmansour.pythonanywhere.com/api';
 
 const Axios = axios.create({
     headers: {
