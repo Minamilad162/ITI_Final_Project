@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Carousel, { consts } from 'react-elastic-carousel';
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
+import  { consts } from 'react-elastic-carousel';
+import { BrowserRouter as  Link, } from 'react-router-dom';
 import "./Series.scss";
 
 import API from '../../../API';

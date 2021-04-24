@@ -43,9 +43,9 @@ function App() {
                     <Route path="/login">
                         <Login header={'Log In..'} endpoint={'logme'} />
                     </Route>
-                    {/* <Route path="/Payment">
+                    <Route path="/Payment">
                         <Payment/>
-                    </Route> */}
+                    </Route>
                     <Route path="/register">
                         <Register />
                     </Route>

@@ -79,7 +79,7 @@ export default function Footer() {
         </ul>
     </div>
    */}
-    <div className="col-6 col-md">
+    {/* <div className="col-6 col-md"> */}
         {/* <h5>About</h5> */}
         {/* <ul className="list-unstyled text-small">
             <li className="mb-1">
