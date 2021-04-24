@@ -43,10 +43,10 @@ export default function Footer() {
                         </a>
                     </section>
 
-    <div className="row">
-    <div className="col-12 col-md">
+    {/* <div className="row">
+    <div className="col-12 col-md"> */}
     {/* <h5>Features</h5> */}
-        <ul className="list-unstyled text-small">
+        {/* <ul className="list-unstyled text-small">
             <li className="mb-1">
                 <a className="link-secondary text-decoration-none" href="#">
                     FAQ
@@ -62,9 +62,9 @@ export default function Footer() {
         </ul>
      
     </div>
-    <div className="col-8 col-md">
+    <div className="col-8 col-md"> */}
     {/* <h5>Resources</h5> */}
-        <ul className="list-unstyled text-small">
+        {/* <ul className="list-unstyled text-small">
             <li className="mb-1">
                 <a className="link-secondary text-decoration-none" href="#">
                     Help Center
@@ -78,10 +78,10 @@ export default function Footer() {
            
         </ul>
     </div>
-  
+   */}
     <div className="col-6 col-md">
         {/* <h5>About</h5> */}
-        <ul className="list-unstyled text-small">
+        {/* <ul className="list-unstyled text-small">
             <li className="mb-1">
                 <a className="link-secondary text-decoration-none" href="#">
                     Ways to Watch
@@ -96,7 +96,7 @@ export default function Footer() {
             
         </ul>
     </div>
-</div>
+</div> */}
     
 
                     <section className="mb-4">
