@@ -36,7 +36,7 @@ export default function Login({ header, endpoint }) {
                         <form className="form p-3" onSubmit={handleSubmit}>
                             <div class="mb-3">
                                 <label className="form-label text">Username</label>
-                                <input name="username" placeholder="Username" className="form-control input" onChange={handleChange}></input>
+                                <input name="username" placeholder="Username" type="text" className="form-control input" onChange={handleChange}></input>
                             </div>
                             <div className="mb-3">
                                 <label className="form-label text">Password</label>

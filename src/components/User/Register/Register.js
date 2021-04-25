@@ -37,12 +37,12 @@ export default function Register() {
                         <form className="form " onSubmit={handleSubmit}>
                             <div class="mb-3">
                                 <label className="form-label text label">Email</label>
-                                <input className="input form-control input" name="email" onChange={handleChange} placeholder="Email"  />
+                                <input className="input form-control input" name="email" type="email" onChange={handleChange} placeholder="Email"  />
                             </div>
 
                             <div class="mb-3">
                                 <label className="form-label text label">username</label>
-                                <input className="input form-control input" name="username" onChange={handleChange} placeholder="username" />
+                                <input className="input form-control input" name="username" type="text" onChange={handleChange} placeholder="username" />
                             </div>
 
                             <div className="mb-3">
