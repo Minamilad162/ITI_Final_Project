@@ -37,7 +37,7 @@ export default function Nav() {
                         {logged ? (
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <Link class="nav-link active" aria-current="page" to="/">
+                                    <Link class="nav-link active" aria-current="page" to="/home">
                                         Home
                                     </Link>
                                 </li>

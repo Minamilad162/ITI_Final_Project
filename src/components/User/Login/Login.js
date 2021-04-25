@@ -22,6 +22,7 @@ export default function Login({ header, endpoint }) {
         const response = await API.post(endpoint, JSON.stringify(data));
         localStorage.setItem('token', response.token);
         history.push('/home');
+        window.location.reload();
     };
     return (
         <>

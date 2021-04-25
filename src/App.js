@@ -47,7 +47,7 @@ function App() {
                     <Route path="/register">
                         <Register />
                     </Route>
-
+                    
                     <Route exact path="/home">
                         <Home/>
                     </Route>
