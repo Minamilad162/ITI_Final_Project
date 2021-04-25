@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import './login.scss';
 import API from '../../../API';
 import Footer from '../../Landing-Page/Footer';
+import { useHistory } from 'react-router';
 
 export default function Login({ header, endpoint }) {
+    const history = useHistory();
     const [data, setData] = useState({});
 
     const handleChange = (e) => {
@@ -19,7 +21,7 @@ export default function Login({ header, endpoint }) {
         console.log(JSON.stringify(data));
         const response = await API.post(endpoint, JSON.stringify(data));
         localStorage.setItem('token', response.token);
-        window.location.replace('/');
+        history.push('/home');
     };
     return (
         <>

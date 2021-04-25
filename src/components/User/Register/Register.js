@@ -1,35 +1,31 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './Register.scss';
 import API from '../../../API';
 import Footer from '../../Landing-Page/Footer';
+import {useHistory} from 'react-router-dom';
 
-class Register extends Component {
-    constructor(props, id) {
-        super(props);
-        this.state = {};
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
+export default function Register() {
+    const [data, setData] = useState({});
+    const history = useHistory();
 
-    handleChange(e) {
+    const handleChange = (e) => {
         const newData = {
             [e.target.name]: e.target.value,
         };
-        this.setState(newData);
+       setData(newData);
     }
 
-    async handleSubmit(e) {
+     const handleSubmit = async (e) =>   {
         e.preventDefault();
         try {
-            const response = await API.post('register/', JSON.stringify(this.state));
+            const response = await API.post('register/', JSON.stringify(data));
             window.localStorage.setItem('userid', response.id);
-            window.location.replace('/login');
+            history.push('/login');
         } catch (err) {
             alert('Something went wrong');
         }
     }
 
-    render() {
         return (
             <div id="Register" className=" flex-wrap  ">
                 <div className="box d-flex justify-content-around flex-column align-items-center">
@@ -38,25 +34,25 @@ class Register extends Component {
                             <h1 className="title text label text-center ">Sign Up</h1>
                         </div>
 
-                        <form className="form " onSubmit={this.handleSubmit}>
+                        <form className="form " onSubmit={handleSubmit}>
                             <div class="mb-3">
                                 <label className="form-label text label">Email</label>
-                                <input className="input form-control input" name="email" onChange={this.handleChange} placeholder="Email"  />
+                                <input className="input form-control input" name="email" onChange={handleChange} placeholder="Email"  />
                             </div>
 
                             <div class="mb-3">
                                 <label className="form-label text label">username</label>
-                                <input className="input form-control input" name="username" onChange={this.handleChange} placeholder="username" />
+                                <input className="input form-control input" name="username" onChange={handleChange} placeholder="username" />
                             </div>
 
                             <div className="mb-3">
                                 <label className="form-label text label ">Password</label>
-                                <input type="password" placeholder="Your Password.." className="form-control input" name="password" onChange={this.handleChange}></input>
+                                <input type="password" placeholder="Your Password.." className="form-control input" name="password" onChange={handleChange}></input>
                             </div>
 
                             <div className="mb-3">
                                 <label className="form-label text label ">Repeat Your Password</label>
-                                <input type="password" placeholder="Repeat Your Password.." className="form-control input" name="password2" onChange={this.handleChange}></input>
+                                <input type="password" placeholder="Repeat Your Password.." className="form-control input" name="password2" onChange={handleChange}></input>
                             </div>
                             <button type="submit" className="btn btn-danger mb-3 ">
                                 Submit
@@ -69,7 +65,4 @@ class Register extends Component {
                 </div>
             </div>
         );
-    }
 }
-
-export default Register;

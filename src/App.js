@@ -30,7 +30,7 @@ function App() {
     }, []);
 
     if (!loaded) return <Loader />;
-    else if (!logged)
+    
         return (
             <Router>
                 <Nav />
@@ -48,29 +48,13 @@ function App() {
                         <Register />
                     </Route>
 
-                    <Redirect to="/login" />
-                </Switch>
-
-                <a className="position-fixed bottom-0 end-0 btn btn-light" href="#nav">
-                    Top
-                </a>
-            </Router>
-        );
-    else
-        return (
-            <Router>
-                <Nav />
-                <Switch>
-                    <Route exact path="/">
-                        <Home />
+                    <Route exact path="/home">
+                        <Home/>
                     </Route>
                     <Route path="/landing-page">
                         <LandingPage />
                     </Route>
-                    <Route path="/Login">
-                        <Login header={'Please Sign In..'} endpoint={'/logme'} />
-                    </Route>
-
+                    
                     <Route path="/EditProfile">
                         <EditProfile />
                     </Route>
@@ -78,18 +62,23 @@ function App() {
                     <Route path="/movies">
                         <Movies />
                     </Route>
+
                     <Route exact path="/series">
                         <Series />
                     </Route>
+
                     <Route path="/series/:id">
                         <Seasons />
                     </Route>
+
                     <Route path="/Dashboard">
                         <App3 />
                     </Route>
+
                     <Route path="/VideoPlayer">
                         <VideoApp />
                     </Route>
+
                     <Route path="/Seasons">
                         <Seasons />
                     </Route>
@@ -98,11 +87,20 @@ function App() {
                         <Episodes />
                     </Route>
                     <Route path="/contact-us" />
+                    
                 </Switch>
+
                 <a className="position-fixed bottom-0 end-0 btn btn-light" href="#nav">
                     Top
                 </a>
             </Router>
+       
+    
+        
+           
+            
+                   
+           
         );
 }
 export default App;
